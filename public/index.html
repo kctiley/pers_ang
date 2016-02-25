@@ -7,13 +7,20 @@
   <link rel="stylesheet" href="/stylesheets/style.css">
   <title>Klint-The-Human</title>
 </head>
-<body>
+<body ng-controller='indexController'>
   <div class='header'>
     <h2>Klint Tiley</h2>
-    <a href="/home">home</a>
-    <a href="/portfolio">portfolio</a>
-    <a href="/about">about</a>
-    <a href="/contact">contact</a>
+    <!-- <a href="/home" ng-click="fadeLink('home')">home</a>
+    <a href="/portfolio" ng-click="fadeLink('portfolio')">portfolio</a>
+    <a href="/about" ng-click="fadeLink('about')">about</a>
+    <a href="/contact" ng-click="fadeLink('contact')">contact</a> -->
+    <div>
+      <a href='/{{item}}' ng-repeat="item in collection"
+             ng-class="{ 'selected-class-name': $index == selectedIndex }"
+             ng-click="itemClicked($index)">
+        {{ item }}
+      </a>
+    </div>
   </div>
   <div ng-view></div>
 
