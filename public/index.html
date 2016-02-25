@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app='klinttiley'>
+<head>
+  <base href="/">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Klint-The-Human</title>
+</head>
+<body>
+  <div class='header'>
+    <h2>Klint Tiley</h2>
+    <a href="/home">home</a>
+    <a href="/portfolio">portfolio</a>
+    <a href="/about">about</a>
+    <a href="/contact">contact</a>
+  </div>
+  <div ng-view></div>
+
+  <script src="/javascripts/app.js"></script>    
+  <script src="/javascripts/controllers.js"></script>
+  <script src="/javascripts/directives.js"></script>
+  <script src="/javascripts/services.js"></script>
+</body>
+</html>
