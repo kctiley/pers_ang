@@ -55,14 +55,14 @@ body {
 }
 
 .previews-wrapper {
-  width: 60%;
-  margin-left: 20%;
+  width: 80%;
+  margin-left: 10%;
 }
 
 .preview {
   position: relative;
   width: 100%;
-  height: 150px;
+  height: 64vw;
   display: block;
   white-space: nowrap;
   vertical-align: top;
@@ -169,10 +169,11 @@ body {
 
     .preview {
       width: 48%;
-      height: 200px;
+      height: 31vw;
       display: inline-block;
       white-space: nowrap;
     }
+
     .slides-wrapper {
       width: 70%;
       height: 47vw;
@@ -213,7 +214,7 @@ body {
 
     .preview {
       width: 32%;
-      height: 220px;
+      height: 20vw;
       display: inline-block;
       white-space: nowrap;
     }
