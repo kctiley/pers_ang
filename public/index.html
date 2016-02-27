@@ -11,15 +11,9 @@
 <body ng-controller='indexController'>
   <div class='header group'>
     <h2>Klint Tiley</h2>
-    <!-- <a href="/home" ng-click="fadeLink('home')">home</a>
-    <a href="/portfolio" ng-click="fadeLink('portfolio')">portfolio</a>
-    <a href="/about" ng-click="fadeLink('about')">about</a>
-    <a href="/contact" ng-click="fadeLink('contact')">contact</a> -->
     <div>
-      <a href='/{{item}}' ng-repeat="item in collection"
-             ng-class="{ 'selected-class-name': $index == selectedIndex }"
-             ng-click="itemClicked($index)">
-        {{ item }}
+      <a href='/{{item}}' id="{{item}}-link"  ng-repeat="item in linkCollection">
+        {{item}}
       </a>
     </div>
   </div>

@@ -42,9 +42,10 @@ body {
   opacity: 1;
 }
 
-.selected-class-name {
+.link-selected {
   color: red;
 }
+
 
 .main-logo-wrapper {
   width: 50%;
