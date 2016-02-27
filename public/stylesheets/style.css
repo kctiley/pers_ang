@@ -3,6 +3,12 @@
   margin: 0;
 }
 
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .hover:hover {
   cursor: pointer;
 }
@@ -13,7 +19,8 @@ body {
 
 .header {
   width: 100%;
-  height: 2.25em;
+  /*height: 2.25em;*/
+  border: 1px solid gray;
 }
 
 .header h2 {
@@ -51,7 +58,11 @@ body {
 .main-logo-wrapper img{
   width: 66%;
   margin-left: 16.5%;
-  margin-top: 16.5%;
+  margin-top: 12.5%;
+}
+
+.page-title {
+  font-size: 1.25em;
 }
 
 .previews-wrapper {
@@ -131,18 +142,25 @@ body {
   border: 1px solid gray;
 }
 
+.slide {
+  width: 100%;
+  height: 80%;
+  border: 1px solid gray;
+}
+
 #close-slides {
   position: absolute;
   opacity: .5;
-  bottom: 5%;
-  right: 5%;
+  bottom: 2%;
+  right: 2%;
+  font-size: 1em;
 }
 
 @media screen and (max-width:800px) and (min-width:540px)
   {
-    .header {
-      height: 2.75em;
-    }
+    /*.header {*/
+      /*height: 2.75em;*/
+    /*}*/
 
     .header h2 {
       font-size: 1.25em;
@@ -159,7 +177,10 @@ body {
       margin-left: 33%;
       margin-top: 100px;
       height: 33vw;
-      /*border: .8em solid black;*/
+    }
+
+    .page-title {
+      font-size: 1.6em; 
     }
 
     .previews-wrapper {
@@ -175,19 +196,22 @@ body {
     }
 
     .slides-wrapper {
-      width: 70%;
-      height: 47vw;
-      margin-left: 15%;
+      width: 80%;
+      height: 59.2vw;
+      margin-left: 10%;
     }
 
+    #close-slides {
+      font-size: 1.25em;
+    }
 
 }
 
 @media screen and (min-width:800px)
   {
-    .header {
-      height: 3em;
-    }
+    /*.header {*/
+      /*height: 3em;*/
+    /*}*/
 
     .header h2 {
       font-size: 1.5em;
@@ -204,7 +228,13 @@ body {
       margin-left: 33%;
       margin-top: 100px;
       height: 33vw;
-      /*border: 1em solid black;*/
+    }
+
+    .page-title {
+      font-size: 1.8em;
+      padding: 0;
+      border: 0;
+      margin: 0;
     }
 
     .previews-wrapper {
@@ -221,12 +251,13 @@ body {
 
     .slides-wrapper {
       width: 60%;
-      height: 40vw;
+      height: 44vw;
       margin-left: 20%;
     }
 
-    
-
+    #close-slides {
+      font-size: 1.5em;
+    }
     /*#red, #yellow, #green, #blue {
       width: 25%;
       display: inline-block;
