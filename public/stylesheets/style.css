@@ -113,6 +113,16 @@ body {
   text-align: center;
 }
 
+.preview .text span {
+  border: 2px solid white;
+  border-radius: 1em;
+  padding: .5em;
+}
+
+.preview .text span:hover {
+  cursor: pointer;
+}
+
 
 
 

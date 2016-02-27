@@ -1,45 +1,52 @@
 <h1> Portfolio </h1>
-<div class='previews-wrapper'>
+<div class='previews-wrapper' ng-show='showPreviewsWrapper' >
   <div class='preview'>
     <img src="images/flyers_landing.png">
-    <div class='text'>
-      <h3>Flyers Forum</h3>
-      <p>Ruby<br>Rails<br>SQLite3</p>
+    <div class='text' >
+      <h3>Flyers Forum </h3>
+      <p>Ruby<br>Rails<br>SQLite3<br><br><br><span  ng-click="slidesShow()">View slides</span></p>
+
     </div>
   </div>
   <div class='preview'>
     <img src="images/geo_home.png">
     <div class='text'>
       <h3>GEO Planner</h3>
-      <p>Javascript<br>Express<br>MongoDB<br>Angular<br>Google Maps API</p>
+      <p>Javascript<br>Express<br>MongoDB<br>Angular<br>Google Maps API<br><br><br><span  ng-click="slidesShow()">View slides</span></p>
     </div>
   </div>
   <div class='preview'>
     <img src="images/upnote_home.png">
     <div class='text'>
       <h3>UpNote</h3>
-      <p>Ruby<br>Rails<br>SQLite3</p>
+      <p>Ruby<br>Rails<br>SQLite3<br><br><br><span  ng-click="slidesShow()">View slides</span></p>
     </div>
   </div>
   <div class='preview'>
     <img src="images/rocket_home.png">
     <div class='text'>
       <h3>Rocket</h3>
-      <p>Javascript<br>Express<br>MongoDB<br>jQuery</p>
+      <p>Javascript<br>Express<br>MongoDB<br>jQuery<br><br><br><span  ng-click="slidesShow()">View slides</span></p>
     </div>
   </div>
   <div class='preview'>
     <img class='vert' src="images/agent_sq2.png" >
     <div class='text'>
       <h3>Agent</h3>
-      <p>Xcode<br>Swift</p>
+      <p>Xcode<br>Swift<br><br><br><span  ng-click="slidesShow()">View slides</span></p>
     </div>
   </div>
   <div class='preview'>
     <img src="images/nyt_home.png">
     <div class='text'>
       <h3>NYT List</h3>
-      <p>Javascript<br>Express/NYT API
+      <p>Javascript<br>Express/NYT API<br><br><br><span  ng-click="slidesShow()">View slides</span></p>
     </div>
   </div>
+</div>
+<div class='slides-wrapper' ng-show='showSlidesWrapper'>
+  <h1>Slides</h1>
+  <p ng-click='hideSlides()'>
+    Hide slides
+  </p>
 </div>
