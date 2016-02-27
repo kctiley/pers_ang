@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+.hover:hover {
+  cursor: pointer;
+}
+
 body {
   font-family: Verdana, Geneva, sans-serif;
 }
@@ -119,12 +123,20 @@ body {
   padding: .5em;
 }
 
-.preview .text span:hover {
-  cursor: pointer;
+.slides-wrapper {
+  position: relative;
+  width: 90%;
+  height: 60vw;
+  margin-left: 5%;
+  border: 1px solid gray;
 }
 
-
-
+#close-slides {
+  position: absolute;
+  opacity: .5;
+  bottom: 5%;
+  right: 5%;
+}
 
 @media screen and (max-width:800px) and (min-width:540px)
   {
@@ -160,8 +172,14 @@ body {
       height: 200px;
       display: inline-block;
       white-space: nowrap;
-
     }
+    .slides-wrapper {
+      width: 70%;
+      height: 47vw;
+      margin-left: 15%;
+    }
+
+
 }
 
 @media screen and (min-width:800px)
@@ -198,6 +216,12 @@ body {
       height: 220px;
       display: inline-block;
       white-space: nowrap;
+    }
+
+    .slides-wrapper {
+      width: 60%;
+      height: 40vw;
+      margin-left: 20%;
     }
 
     
