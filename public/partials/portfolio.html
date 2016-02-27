@@ -46,7 +46,11 @@
 </div>
 <div class='slides-wrapper' ng-show='showSlidesWrapper'>
   <h1 class='page-title'> Portfolio </h1>
-  <div class='slide'>
+  <div class='slide-window'>
+    <img src={{arrayOfSlides[0][1].image}}>
+  </div>
+  <div class='text'>
+    {{arrayOfSlides[0][0].text}}
   </div>
   <h1 id='close-slides'>
     <i class="fa fa-times hover" ng-click='hideSlides()'></i>
