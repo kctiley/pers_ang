@@ -25,10 +25,13 @@ app.controller('homeController', ['$scope', function($scope) {
 app.controller('portfolioController', ['$scope', function($scope) {
   $scope.showPreviewsWrapper = true;
   $scope.showSlidesWrapper = false;
-  $scope.slidesShow = function(){
+  $scope.slidesShow = function(slideGroupIndex){
     $scope.showPreviewsWrapper = false;
     $scope.showSlidesWrapper = true;
+    $scope.slideGroupIndex = slideGroupIndex;
   }
+
+
   $scope.hideSlides = function(){
     $scope.showSlidesWrapper = false;
     $scope.showPreviewsWrapper = true;
@@ -40,26 +43,29 @@ app.controller('portfolioController', ['$scope', function($scope) {
       {image:"images/flyers_logo.png", text: "This is flyers text and stuff"}
     ]
   ]
+  // Initial slide show index
+  $scope.currentSlideIndex = 0;
 
-  $scope.rotateCarousel = function(slideGroup, slideIndex, buttonAction){
-    // temp group
-    var slideGroup = $scope.arrayOfSlides[0];
-
+  $scope.rotateCarousel = function(buttonAction){
+    var slideGroup = $scope.arrayOfSlides[$scope.slideGroupIndex];
     var frameWidth = 100/slideGroup.length;
-    if(slideIndex == 0 && buttonAction == 'play'){
-      var count = 0;
-
-      setInterval(function(){
-          count += 1;
-          if(count == slideGroup.length){
-            count = 0;
+    // Pause carousel
+    if(buttonAction == 'pause'){
+        clearInterval($scope.play);
+      }
+    // Play carousel
+    $scope.play = setInterval(go, 3000);
+    function go(){
+      if(buttonAction == 'play'){
+        $scope.currentSlideIndex += 1;
+          if($scope.currentSlideIndex == slideGroup.length){
+            $scope.currentSlideIndex = 0;
           }
-          var margin = "-" + count * 100 + "%";
-          console.log(margin);
+          var margin = "-" + $scope.currentSlideIndex * 100 + "%";
           $scope.carouselStyle = {"margin-left" : margin};
           $scope.$apply();
-      }, 3000);
-    }
+      }
+    } 
   }
 
 }]);

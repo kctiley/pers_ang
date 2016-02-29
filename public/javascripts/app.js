@@ -1,4 +1,4 @@
-var app = angular.module('klinttiley', ['ngRoute', 'ui.bootstrap'])
+var app = angular.module('klinttiley', ['ngRoute', 'ui.bootstrap', 'ngAnimate'])
   .config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider){
     // '$httpProvider',$httpProvider not needed unless using services
    $routeProvider
