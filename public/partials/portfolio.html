@@ -47,10 +47,18 @@
 <div class='slides-wrapper' ng-show='showSlidesWrapper'>
   <h1 class='page-title'> Portfolio </h1>
   <div class='slide-window'>
-    <img src={{arrayOfSlides[0][1].image}}>
+    <div class='slide-carousel' ng-style="carouselStyle">
+      <img src="images/flyers_landing.png">
+      <img src="images/flyers3.png">
+      <img src="images/flyers4.png">
+    </div>
+    <div class='slides-buttons'>
+      <i class="fa fa-play-circle-o" ng-click="rotateCarousel(blah, 0, 'play')"></i>
+    </div>
   </div>
   <div class='text'>
-    {{arrayOfSlides[0][0].text}}
+    <h4> Title </h4>
+    <p> a paragraph </p>
   </div>
   <h1 id='close-slides'>
     <i class="fa fa-times hover" ng-click='hideSlides()'></i>

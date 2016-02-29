@@ -41,6 +41,27 @@ app.controller('portfolioController', ['$scope', function($scope) {
     ]
   ]
 
+  $scope.rotateCarousel = function(slideGroup, slideIndex, buttonAction){
+    // temp group
+    var slideGroup = $scope.arrayOfSlides[0];
+
+    var frameWidth = 100/slideGroup.length;
+    if(slideIndex == 0 && buttonAction == 'play'){
+      var count = 0;
+
+      setInterval(function(){
+          count += 1;
+          if(count == slideGroup.length){
+            count = 0;
+          }
+          var margin = "-" + count * 100 + "%";
+          console.log(margin);
+          $scope.carouselStyle = {"margin-left" : margin};
+          $scope.$apply();
+      }, 3000);
+    }
+  }
+
 }]);
 
 app.controller('aboutController', ['$scope', function($scope) {
