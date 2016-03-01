@@ -202,20 +202,22 @@ body {
 }
 
 .dots-container {
-  position: relative;
+  position: absolute;
+  opacity: .7;
+  top: 54vw;
+  left: 0;
   width: 100%;
   text-align: center;
+  z-index: 1002;
 }
 
 .dots {
   display: inline;
+  font-size: .5em;
 }
 
 @media screen and (max-width:800px) and (min-width:540px)
   {
-    /*.header {*/
-      /*height: 2.75em;*/
-    /*}*/
 
     .header h2 {
       font-size: 1.25em;
@@ -292,6 +294,15 @@ body {
 
     .arrow-right{
       font-size: 3em;
+    }
+
+    .dots-container {
+      top: 45vw;
+    }
+
+    .dots {
+      display: inline;
+      font-size: .65em;
     }
 
 }
@@ -379,6 +390,15 @@ body {
 
     .arrow-right{
       font-size: 4em;
+    }
+
+    .dots-container {
+      top: 36vw;
+    }
+
+    .dots {
+      display: inline;
+      font-size: .75em;
     }
     /*#red, #yellow, #green, #blue {
       width: 25%;
