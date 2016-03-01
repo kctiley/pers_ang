@@ -19,8 +19,6 @@ body {
 
 .header {
   width: 100%;
-  /*height: 2.25em;*/
-  border: 1px solid gray;
 }
 
 .header h2 {
@@ -137,20 +135,10 @@ body {
 
 .slides-wrapper {
   position: relative;
-  width: 90%;
-  height: 60vw;
+  width: 90vw;
+  height: 66vw;
   margin-left: 5%;
 }
-
-.slide-window {
-  position: relative;
-  width: 100%;
-  height: 80%;
-  border: 1px solid gray;
-  overflow-x: scroll; 
-  /*overflow: hidden;*/
-}
-
 
 .slides-wrapper .text {
   width: 80%;
@@ -171,23 +159,57 @@ body {
   bottom: 0;
   right: 0;
   font-size: 1em;
+  z-index: 1002;
 }
 
-.slide-carousel {
-  width: 300% ;
+
+
+.slider {
+    width: 90vw;
+    height: 60vw;
+    overflow: hidden;
+    position: relative;
+    background: #e6e6e6;
+    border: 5px solid #FFF;
+}
+
+.slider img {
+  width: 90vw;
+  height: 60vw;
   position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.slide-window img {
+.arrow-left{
+  position: absolute;
+  opacity: .4;
+  top: 45%;
+  left: 0vw;
+  font-size: 2em;
+  z-index: 1002;
+  background-color: white;
+}
+
+.arrow-right{
+  position: absolute;
+  opacity: .4;
+  top: 45%;
+  right: 0vw;
+  font-size: 2em;
+  z-index: 1002;
+  background-color: white;
+}
+
+.dots-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.dots {
   display: inline;
-  width: 33%;
 }
-
-
-
-
-
-
 
 @media screen and (max-width:800px) and (min-width:540px)
   {
@@ -229,8 +251,8 @@ body {
     }
 
     .slides-wrapper {
-      width: 80%;
-      height: 59.2vw;
+      width: 75vw;
+      height: 55vw;
       margin-left: 10%;
     }
 
@@ -244,6 +266,32 @@ body {
 
     .slides-wrapper .text p{
       font-size: .72em;
+    }
+
+    .slider {
+      width: 75vw;
+      height: 50vw;
+      overflow: hidden;
+      position: relative;
+      background: #e6e6e6;
+      border: 5px solid #FFF;
+    }
+
+    .slider img {
+      width: 75vw;
+      height: 50vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+
+    .arrow-left{
+      font-size: 3em;
+    }
+
+    .arrow-right{
+      font-size: 3em;
     }
 
 }
@@ -291,8 +339,8 @@ body {
     }
 
     .slides-wrapper {
-      width: 60%;
-      height: 44vw;
+      width: 60vw;
+      height: 50vw;
       margin-left: 20%;
     }
 
@@ -306,6 +354,31 @@ body {
 
     .slides-wrapper .text p{
       font-size: .8em;
+    }
+
+    .slider {
+      width: 60vw;
+      height: 40vw;
+      overflow: hidden;
+      position: relative;
+      background: #e6e6e6;
+      border: 5px solid #FFF;
+    }
+
+    .slider img {
+      width: 60vw;
+      height: 40vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .arrow-left{
+      font-size: 4em;
+    }
+
+    .arrow-right{
+      font-size: 4em;
     }
     /*#red, #yellow, #green, #blue {
       width: 25%;
