@@ -216,6 +216,52 @@ body {
   font-size: .5em;
 }
 
+.about {
+  width: 90vw;
+  margin-left: 5vw;
+}
+
+.intro {
+  width:100%;
+  margin-top: 8vw;
+  
+}
+
+.intro-text{
+  display: block;
+  width: 80vw;
+  margin-left: 4vw;
+  text-align: left;
+}
+
+.intro-text h1{
+  font-size: 1em;
+  margin-bottom: .66em;
+  font-weight: 700;
+
+}
+
+.intro-text .professional{
+  font-size: .7em;
+  margin-bottom: .66em;
+}
+
+.intro-text .fun{
+  font-size: .65em;
+}
+
+.my-pic {
+  display: block;
+}
+
+.my-pic img{
+  display: block;
+  width: 42vw;
+  height: 45vw;
+  margin-left: 20vw;
+  border-radius: 8vw;
+}
+
 @media screen and (max-width:800px) and (min-width:540px)
   {
 
@@ -304,6 +350,46 @@ body {
       display: inline;
       font-size: .65em;
     }
+
+
+    .intro-text {
+      display: inline;
+      float: left;
+    }
+
+    .my-pic img {
+      display: inline;
+      float: left;
+      width: 28vw;
+      height: 30vw;
+      margin-left: 10vw;
+      border-radius: 60vw;
+    }
+
+
+    .intro-text{
+      display: block;
+      width: 30vw;
+      margin-left: 4vw;
+      text-align: left;
+    }
+
+    .intro-text h1{
+      font-size: 1.1em;
+      margin-bottom: .5em;
+      font-weight: 700;
+
+    }
+
+    .intro-text .professional{
+      font-size: .8em;
+      margin-bottom: 1em;
+    }
+
+    .intro-text .fun{
+      font-size: .7em;
+    }
+
 
 }
 
@@ -400,6 +486,44 @@ body {
       display: inline;
       font-size: .75em;
     }
+
+    .intro-text {
+      display: inline;
+      float: left;
+    }
+
+    .my-pic img {
+      display: inline;
+      float: left;
+      width: 28vw;
+      height: 30vw;
+      margin-left: 10vw;
+      border-radius: 60vw;
+    }
+
+    .intro-text{
+      display: block;
+      width: 30vw;
+      margin-left: 4vw;
+      text-align: left;
+    }
+
+    .intro-text h1{
+      font-size: 1.5em;
+      margin-bottom: 1em;
+      font-weight: 700;
+
+    }
+
+    .intro-text .professional{
+      font-size: .9em;
+      margin-bottom: 1em;
+    }
+
+    .intro-text .fun{
+      font-size: .8em;
+    }
+
     /*#red, #yellow, #green, #blue {
       width: 25%;
       display: inline-block;
