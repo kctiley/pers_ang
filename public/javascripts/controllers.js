@@ -36,6 +36,7 @@ app.controller('portfolioController', ['$scope', function($scope) {
   $scope.hideSlidesWindow = function(){
     $scope.showSlidesWrapper = false;
     $scope.showPreviewsWrapper = true;
+    $scope.currentIndex = 0;
   }
 
   $scope.slideGroups = [

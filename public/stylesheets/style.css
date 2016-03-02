@@ -64,6 +64,11 @@ body {
   margin-top: 12.5%;
 }
 
+.logo-title {
+  text-align: center;
+  font-size: 1.8vw;
+}
+
 .page-title {
   font-size: 1.25em;
 }
