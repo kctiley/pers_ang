@@ -171,3 +171,31 @@ app.animation('.slide-animation', function () {
             }
         };
     });
+
+app.directive("scroll", function ($window) {
+
+      console.log("test")
+    return function(scope, element, attrs) {
+        scope.currentScroll = 0;
+        scope.prevScroll = 0;
+      
+        angular.element($window).bind("scroll", function() {
+            // if (this.pageYOffset >= 100) {
+            //      scope.boolChangeClass = true;
+            //      console.log('Scrolled below header.');
+            //  } else {
+            //      scope.boolChangeClass = false;
+            //      console.log('Header is in view.');
+            //  }
+            var Yoff = this.pageYOffset;
+            var moveX = Yoff * .01 - 66 + "%"
+            var moveY = -(Yoff * .02) + "%"
+            console.log(Yoff);
+            scope.styleFlowHoriz = {'margin-left': moveX};
+            scope.styleFlowVert = {'margin-top': moveY};
+
+            scope.$apply();
+            });
+          
+        };
+});

@@ -23,50 +23,173 @@ body {
 
 .header {
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1003;
+  color: white;
+  /*background:  rgba(15,9,9,0.4);*/
 }
 
 .header h2 {
+  color: red;
   font-size: 1em;
   padding: .5em;
   font-weight: 100;
+  margin-left: 15vw;
   float: left;
+  opacity: 1;
 }
 
 .header a {
+  color: white;
+  /*color: #F781D8;*/
+  /*color: gray;*/
+  /*color: #58FAD0;*/
   float: right;
   text-decoration: none;
   padding: .25em;
   font-size: .75em;
-  opacity: .5;
+ 
 }
 
 .header a:hover {
   opacity: 1;
 }
 
-.link-selected {
+a.link-selected {
+  /*color: gray;*/
+  /*color: #F781D8;*/
   color: red;
 }
 
+/*.home-backer {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: -1000;
+  background-image: url("/images/backers/cartoon_clouds.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+*/
+.home-backer-bluesky {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: -2000;
+  background-color: rgb(35, 244, 223);
+}
 
-.main-logo-wrapper {
+.backer-movement-window {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: -1000;
+}
+
+
+
+.home-backer-stars {
+  position: absolute;
+  top: 0;
+  margin-left: -66%;
+  width: 300%;
+  height: 100%;
+  /*z-index: -1000;*/
+  background-image: url("/images/backers/stars1.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+.home-backer-planets {
+  position: absolute;
+  top: 0;
+  margin-left: 0;
+  margin-top: 0%;
+  width: 100%;
+  height: 300%;
+  /*height: 100%;*/
+  /*z-index: -1000;*/
+  background-image: url("/images/backers/planets1.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+}
+
+.landing-wrapper {
+  margin-top: 0;
+  height: 100vh;
+}
+
+.philosophy-wrapper {
+  /*background-color: black;*/
+  /*background:  rgba(15,9,9,0.4);*/
+  color: black;
+  background-color: white;
+  margin-top: 50vh;
   width: 50%;
-  margin-left: 25%;
-  margin-top: 100px;
-  height: 50vw;
-  /*border: .5em solid black;*/
-  border: 1vw solid black;
+  padding: 5%;
+  border-radius: 4em;
+  box-shadow: 5px 5px 5px black;
 }
 
-.main-logo-wrapper img{
-  width: 66%;
-  margin-left: 16.5%;
-  margin-top: 12.5%;
+.philosophy-wrapper h1{
+  font-size: 1em;
+  color: orange;
 }
 
-.logo-title {
+.philosophy-wrapper p{
+  font-size: .65em;
+}
+
+.techs-wrapper {
+  /*background-color: black;*/
+  background:  rgba(15,9,9,0.7);
+  color: white;
+  margin-top: 50vh;
+  padding: 10%;
+}
+
+.techs-wrapper h1{
+  color: rgb(35, 244, 115);
+}
+
+.landing-wrapper img{
+  width: 36vw;
+  margin-left: 33%;
+  margin-top: 25vh;
+  height: 38vw;
+}
+
+.landing-wrapper h1{
+  font-size: 1em;
+  font-weight: 700;
   text-align: center;
-  font-size: 1.8vw;
+  color: black;
+  opacity: .7;
+}
+
+.gallerie-intro-wrapper {
+  padding: 16%;
+  /*height: 100vh;*/
+  color: white;
+}
+
+.gallerie-dyn-wrapper {
+  /*background-color: white;*/
+  background:  rgba(15,9,9,0.7);
+  width: 100%;
+  margin-top: 50vh;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
 }
 
 .page-title {
@@ -86,6 +209,7 @@ body {
   white-space: nowrap;
   vertical-align: top;
   border: 1px solid gray;
+  background-color: white;
   overflow: hidden;
 }
 
@@ -112,7 +236,7 @@ body {
 .preview img.vert {
   left: 50%; 
   height: 90%; 
-  width: 50%;
+  width: 40%;
   top: 5%; 
   transform: translateX(-50%);
   border: 1px solid gray;
@@ -228,12 +352,14 @@ body {
 .about {
   width: 80vw;
   margin-left: 10vw;
+  margin-top: 100vw;
+  z-index: 1002;
+  background-color: gray;
 }
 
 .intro {
   width:100%;
   margin-top: 8vw;
-  
 }
 
 .intro-text{
@@ -299,11 +425,24 @@ body {
       font-size: .85em;
     }
 
-    .main-logo-wrapper {
-      width: 33%;
-      margin-left: 33%;
-      margin-top: 100px;
-      height: 33vw;
+    .landing-wrapper img{
+      margin-top: 12vw;
+    }
+
+    .landing-wrapper h1{
+      font-size: 1.7em;
+    }
+
+    .philosophy-wrapper {
+      padding: 14%;
+    }
+
+    .philosophy-wrapper h1{
+      font-size: 1.4em;
+    }
+
+    .philosophy-wrapper p{
+      font-size: .8em;
     }
 
     .page-title {
@@ -445,12 +584,36 @@ body {
       font-size: 1em;
     }
 
-    .main-logo-wrapper {
-      width: 33%;
-      margin-left: 33%;
-      margin-top: 100px;
-      height: 33vw;
+
+    .landing-wrapper img{
+      margin-top: 10vw;
     }
+
+    .landing-wrapper h1{
+      font-size: 2em;
+      font-weight: 700;
+    }
+
+    font-weight: 700;
+
+
+    .philosophy-wrapper {
+      padding: 16%;
+    }
+
+    .philosophy-wrapper h1{
+      font-size: 1.8em;
+    }
+
+    .philosophy-wrapper p{
+      font-size: .9em;
+    }
+
+    .techs-wrapper {
+      padding: 16%
+    }
+
+
 
     .page-title {
       font-size: 1.8em;
@@ -470,6 +633,8 @@ body {
       display: inline-block;
       white-space: nowrap;
     }
+
+
 
     .slides-wrapper {
       width: 60vw;
