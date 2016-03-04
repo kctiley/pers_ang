@@ -191,8 +191,17 @@ app.directive("scroll", function ($window) {
             var moveX = Yoff * .01 - 66 + "%"
             var moveY = -(Yoff * .02) + "%"
             console.log(Yoff);
+
+            // Stars
             scope.styleFlowHoriz = {'margin-left': moveX};
+            // Planets
             scope.styleFlowVert = {'margin-top': moveY};
+            // Left door
+            var doorLeftFactor = -(Yoff * 1.5) + "%";
+            var doorRightFactor = Yoff * 1.5 + 50 +"%";
+            scope.styleDoorLeft = {'margin-left': doorLeftFactor};
+            // Right door
+            scope.styleDoorRight = {'margin-left': doorRightFactor};
 
             scope.$apply();
             });

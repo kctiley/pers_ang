@@ -26,7 +26,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1003;
+  z-index: 9000;
   color: white;
   /*background:  rgba(15,9,9,0.4);*/
 }
@@ -63,18 +63,53 @@ a.link-selected {
   color: red;
 }
 
-/*.home-backer {
+.portfolio-backer {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   height: 100vh;
   z-index: -1000;
-  background-image: url("/images/backers/cartoon_clouds.jpeg");
+  background-color: gray;
+  /*background-image: url("/images/backers/cartoon_clouds.jpeg");*/
   background-repeat: no-repeat;
   background-size: cover;
 }
-*/
+
+.doors-movement-window {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 2000;
+}
+
+.doors-movement-window .left-door {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  background-image: url("/images/backers/skydoorleft.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 0%;
+
+
+}
+.doors-movement-window .right-door {
+  position: absolute;
+  margin-left: 50%;
+  width: 50%;
+  height: 100vh;
+  background-image: url("/images/backers/skydoorright.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-size: cover;
+  background-position: 0% 0%;
+}
+
 .home-backer-bluesky {
   position: fixed;
   width: 100%;
@@ -82,7 +117,8 @@ a.link-selected {
   left: 0;
   height: 100vh;
   z-index: -2000;
-  background-color: rgb(35, 244, 223);
+  /*background-color: rgb(35, 244, 223);*/
+  background-color: rgba(35, 164, 244, .5);
 }
 
 .backer-movement-window {
@@ -127,6 +163,20 @@ a.link-selected {
 .landing-wrapper {
   margin-top: 0;
   height: 100vh;
+  text-align: center;
+}
+
+.landing-wrapper img{
+  width: 70vw;
+  margin-top: 20vh;
+  height: 70vw;
+}
+
+.landing-wrapper h1{
+  font-size: 1.25em;
+  font-weight: 700;
+  color: black;
+  opacity: .7;
 }
 
 .philosophy-wrapper {
@@ -147,7 +197,7 @@ a.link-selected {
 }
 
 .philosophy-wrapper p{
-  font-size: .65em;
+  font-size: .7em;
 }
 
 .techs-wrapper {
@@ -162,32 +212,19 @@ a.link-selected {
   color: rgb(35, 244, 115);
 }
 
-.landing-wrapper img{
-  width: 36vw;
-  margin-left: 33%;
-  margin-top: 25vh;
-  height: 38vw;
-}
 
-.landing-wrapper h1{
-  font-size: 1em;
-  font-weight: 700;
-  text-align: center;
-  color: black;
-  opacity: .7;
-}
 
 .gallerie-intro-wrapper {
+  position: absolute;
   padding: 16%;
-  /*height: 100vh;*/
   color: white;
 }
 
 .gallerie-dyn-wrapper {
-  /*background-color: white;*/
-  background:  rgba(15,9,9,0.7);
+  background-color: white;
+  /*background:  rgba(15,9,9,0.7);*/
   width: 100%;
-  margin-top: 50vh;
+  margin-top: 0vh;
   padding-top: 15vh;
   padding-bottom: 15vh;
 }
@@ -425,8 +462,14 @@ a.link-selected {
       font-size: .85em;
     }
 
+    /*.landing-wrapper{
+      text-align: center;
+    }*/
+  
     .landing-wrapper img{
-      margin-top: 12vw;
+      width: 40vw;
+      height: 40vw;
+      margin-top: 13vh;
     }
 
     .landing-wrapper h1{
@@ -434,7 +477,7 @@ a.link-selected {
     }
 
     .philosophy-wrapper {
-      padding: 14%;
+      padding: 5%;
     }
 
     .philosophy-wrapper h1{
@@ -584,21 +627,22 @@ a.link-selected {
       font-size: 1em;
     }
 
+     /*.landing-wrapper{
+      text-align: center;
+    }*/
 
     .landing-wrapper img{
+      width: 36vw;
+      height: 36vw;
       margin-top: 10vw;
     }
 
     .landing-wrapper h1{
       font-size: 2em;
-      font-weight: 700;
     }
 
-    font-weight: 700;
-
-
     .philosophy-wrapper {
-      padding: 16%;
+      padding: 5%;
     }
 
     .philosophy-wrapper h1{
