@@ -1,18 +1,15 @@
-<div class='portfolio-backer'>
-</div>
-<div class='doors-movement-window'>
-  <div class='left-door' ng-style='styleDoorLeft'>
+<div class='gallery-doors'>
+  <div id='left' ng-style="styleLeft">
   </div>
-  <div class='right-door' ng-style='styleDoorRight'>
+  <div id='right'>
   </div>
+  <h5 class='hover' ng-click='openDoors()'>Enter</h5>
 </div>
-<div class='gallerie-intro-wrapper'>
-  <h1> Gallerie </h1>
-  <p>DIY etsy pickled waistcoat, normcore pinterest pabst biodiesel chicharrones sriracha. Freegan sustainable PBR&B cold-pressed mixtape chartreuse before they sold out pour-over, migas VHS art party gastropub cliche ethical. Raw denim stumptown ethical sriracha flannel. Messenger bag retro mustache 8-bit. Before they sold out cardigan salvia pabst, food truck listicle pop-up polaroid try-hard. </p>
-</div>
-<div class='gallerie-dyn-wrapper'>
+<div class='gallery-previews-wrapper' >
+  <h1>Gallery</h1>
+  <p>DIY etsy pickled waistcoat, normcore pinterest pabst biodiesel chicharrones sriracha.</p>
+  <!-- <img class='tech-logos' src="/images/backers/tech-logos.png"> -->
   <div class='previews-wrapper' ng-show='showPreviewsWrapper' >
-    <h1 class='page-title'>Portfolio</h1>
     <div class='preview'>
       <img src="images/upnote/upnote_landing.png">
       <div class='text' >
@@ -20,8 +17,7 @@
         <p>Ruby<br>Rails<br>SQLite3<br><br><br><span class='hover' ng-click="showSlidesWindow(0)">View slides</span></p>
 
       </div>
-    </div>
-    <div class='preview'>
+    </div><div class='preview'>
       <img src="images/geo_planner/geo-landing.png">
       <div class='text'>
         <h3>GEO Planner</h3>
@@ -77,3 +73,4 @@
     <h6 class="hover" ng-click='hideSlidesWindow()'>back</h6>
   </div>
 </div>
+  

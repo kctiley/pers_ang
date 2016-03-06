@@ -98,6 +98,16 @@ app.controller('portfolioController', ['$scope', function($scope) {
       $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
   };
 
+  $scope.openDoors = function(){
+    console.log("test")
+    $scope.styleLeft = {"margin-left": -40 + "%", "-webkit-transition": "width 2s; /* Safari */",
+    "transition": "width 2s"};
+    // var left = angular.element( document.querySelector( "#left" ) );
+    // left.addClass('open-left');
+    // var right = angular.element( document.querySelector( "#right" ) );
+    // right.addClass('open-right');
+
+  }
 
   // Initial slide show index
   // $scope.currentSlideIndex = 0;
@@ -174,7 +184,6 @@ app.animation('.slide-animation', function () {
 
 app.directive("scroll", function ($window) {
 
-      console.log("test")
     return function(scope, element, attrs) {
         scope.currentScroll = 0;
         scope.prevScroll = 0;
@@ -188,20 +197,29 @@ app.directive("scroll", function ($window) {
             //      console.log('Header is in view.');
             //  }
             var Yoff = this.pageYOffset;
-            var moveX = Yoff * .01 - 66 + "%"
-            var moveY = -(Yoff * .02) + "%"
-            console.log(Yoff);
+            var moveX = Yoff * .01 - 66 + "%";
+            var movex1 = 67 + (Yoff * .25) + "vw";
+            var moveY = -(Yoff * .02) + "%";
+            console.log(movex1)
+            //title
+            scope.styleFlowHorizTitle = {'margin-left': movex1, "margin-top": "80vh", "color": "white", "white-space": "nowrap" };
 
             // Stars
             scope.styleFlowHoriz = {'margin-left': moveX};
             // Planets
             scope.styleFlowVert = {'margin-top': moveY};
             // Left door
-            var doorLeftFactor = -(Yoff * 1.5) + "%";
-            var doorRightFactor = Yoff * 1.5 + 50 +"%";
-            scope.styleDoorLeft = {'margin-left': doorLeftFactor};
+            // var doorLeftFactor = -(Yoff * 1.5) + "%";
+            // var doorRightFactor = Yoff * 1.5 + 50 +"%";
+            // scope.styleDoorLeft = {'margin-left': doorLeftFactor};
             // Right door
-            scope.styleDoorRight = {'margin-left': doorRightFactor};
+            // scope.styleDoorRight = {'margin-left': doorRightFactor};
+            // Fade out
+            var oFactorOut = (100/Yoff);
+            scope.styleFadeOut = {'opacity': oFactorOut};
+            // Fade in
+            var oFactorIn = (Yoff/1200);
+            scope.styleFadeIn = {'opacity': oFactorIn};
 
             scope.$apply();
             });
