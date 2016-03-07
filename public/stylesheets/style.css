@@ -542,6 +542,21 @@ a.link-selected {
 
 }
 
+.icons{
+  display: block;
+  text-align: center;
+}
+
+.icons h2{
+  display: inline;
+  padding: 40px;
+  font-size: 40px;
+}
+
+.icons h2 a {
+  color: white;
+}
+
 /*.about {
   width: 80vw;
   margin-left: 10vw;
