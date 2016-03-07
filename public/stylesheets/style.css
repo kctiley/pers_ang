@@ -22,14 +22,31 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+/*h3 {
+  color: #575B5A;
+  color: black;
+}*/ 
+
+/*p {
+  color: white;
+  font-size: .77em;
+}
+*/
 .header {
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 9000;
-  color: white;
+  background-color: white;
   /*background:  rgba(15,9,9,0.4);*/
+}
+
+.header img{
+  margin-left: 2vw;
+  top: 0;
+  position: absolute;
+  height: 100%;
 }
 
 .header h2 {
@@ -37,21 +54,17 @@ body {
   font-size: 1em;
   padding: .5em;
   font-weight: 100;
-  margin-left: 10vw;
+  margin-left: 15vw;
   float: left;
   opacity: 1;
 }
 
 .header a {
   color: gray;
-  /*color: #F781D8;*/
-  /*color: gray;*/
-  /*color: #58FAD0;*/
   float: right;
   text-decoration: none;
   padding: .25em;
   font-size: .75em;
- 
 }
 
 .header a:hover {
@@ -59,22 +72,48 @@ body {
 }
 
 a.link-selected {
-  /*color: gray;*/
-  /*color: #F781D8;*/
   color: red;
 }
 
-.portfolio-backer {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  z-index: -1000;
-  background-color: gray;
-  /*background-image: url("/images/backers/cartoon_clouds.jpeg");*/
-  background-repeat: no-repeat;
-  background-size: cover;
+.nice-home {
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  margin-top: 40vh;
+  margin-left: 57vw;
+  color:white;
+  white-space: wrap;
+  text-shadow: -4px 4px 0px black;
+  letter-spacing: 3px;
+}
+
+.title h1 {
+  font-size: 2.5em;
+  margin-left: -120px;
+  font-weight: 400;
+}
+
+.sub-title {
+  position: absolute;
+  float: left;
+  margin-top: 60vh;
+  margin-left: 17vw;
+  white-space: nowrap;
+  text-shadow: -1px 1px 0px black;
+}
+
+.sub-title h3 {
+  font-size: 1em;
+  margin-left: 50px;
+  color: #C7FB1C;
+}
+
+.phil2 {
+  padding: 4em;
+  margin-top: 94vh;
+  background-color: white;
 }
 
 .doors-movement-window {
@@ -96,8 +135,6 @@ a.link-selected {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100% 0%;
-
-
 }
 .doors-movement-window .right-door {
   position: absolute;
@@ -143,8 +180,6 @@ a.link-selected {
   z-index: -1000;
 }
 
-
-
 .home-backer-stars {
   position: absolute;
   top: 0;
@@ -168,7 +203,8 @@ a.link-selected {
   background-image: url("/images/backers/space_moon1.jpg");
   /*background-image: url("/images/backers/grass.jpg");*/
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: auto 100%;
+  background-position: 50% 0%;
 }
 
 .gallery-backer-space2 {
@@ -182,7 +218,8 @@ a.link-selected {
   background-image: url("/images/backers/space_center.jpg");
   background-image: url("/images/backers/space2.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: auto 100%;
+  background-position: 50% 0%;
 }
 
 .home-backer-planets {
@@ -222,7 +259,6 @@ a.link-selected {
 }
 
 .philosophy-wrapper {
-  /*background-color: black;*/
   /*background:  rgba(15,9,9,0.4);*/
   color: black;
   background-color: white;
@@ -233,112 +269,66 @@ a.link-selected {
   box-shadow: 5px 5px 5px black;
 }
 
-.gallery-intro-wrapper {
-  /*background:  rgba(15,9,9,0.4);*/
-  /*background-color: black;*/
-  color: white;
-  margin-top: 30vh;
-  width: 80%;
-  margin-left: 5%;
-  padding: 5%;
-  border: 1px solid gray;
-  /*box-shadow: 5px 5px 5px black;*/
-}
-
 .philosophy-wrapper h1{
   font-size: 1em;
   color: orange;
 }
 
-.gallery-intro-wrapper h1{
-  font-size: 1.1em;
-  color: #949898;
-  font-weight: 400;
+.phil2 h3 {
+  color: #5C5D59;
+}
+
+.phil2 p {
+  color: gray;
 }
 
 .philosophy-wrapper p{
   font-size: .7em;
 }
 
-.gallery-intro-wrapper p{
-  font-size: .7em;
-  font-weight: 100;
-}
-
 .techs-wrapper {
-  /*background-color: black;*/
   background:  rgba(15,9,9,0.7);
   color: white;
   margin-top: 50vh;
   padding: 10%;
-}
-
-.gallery-previews-wrapper {
-  /*background-color: black;*/
-  background:  rgba(15,9,9,0.7);
-  color: white;
-  margin-top: 50vh;
-  padding: 10%;
-}
-/*
-.techs-wrapper h1{
-  color: rgb(164, 244, 35);
-  font-size: 1em;
-}
-
-.techs-wrapper p{
-  font-size: .7em;
-}
-*/
-.gallery-previews-wrapper h1{
-  color: #949898;
-  font-size: 1.1em;
-}
-.gallery-previews-wrapper p{
-  color: white;
-  font-size: .7em;
 }
 
 .tech-logos {
   width: 100%;
 }
 
-
-
-/*.gallerie-intro-wrapper {
-  position: absolute;
-  padding: 16%;
-  color: white;
-}
-*/
-.gallerie-dyn-wrapper {
-  /*background-color: white;*/
-  /*background:  rgba(15,9,9,0.7);*/
-  background:  rgb(240, 239, 239);
-  width: 100%;
-  margin-top: 0vh;
-  padding-top: 15vh;
-  padding-bottom: 15vh;
-}
-
 .page-title {
   font-size: 1.25em;
 }
 
+
+.gallery-wrapper {
+  padding-top: 6vw;
+  padding-bottom: 6vw;
+  width: 100%;
+  background: white;
+}
+
 .previews-wrapper {
-  /*width: 80%;*/
-  /*margin-left: 10%;*/
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: white;
+  margin: 15vw;
+  width: 70vw;
+  background-color: #E8E8E7;
 }
 
 .preview {
   position: relative;
-  width: 100%;
-  height: 64vw;
+  width: 90%;
+  margin-left: 5%;
+  height: 44vw;
+  margin-top: 16px;
+  border-radius: 4px;
   display: block;
   white-space: nowrap;
   vertical-align: top;
-  border: 1px solid gray;
-  /*background-color: white;*/
+  background-color: white;
   overflow: hidden;
 }
 
@@ -348,7 +338,7 @@ a.link-selected {
   left: 0;
   width: 100%;
   height: 100%;
-  background: black;
+  background: #3FB8BF;
   color: white;
   opacity: 0;
 }
@@ -372,10 +362,11 @@ a.link-selected {
 }
 
 .preview .text:hover {
-  opacity: .75;
+  opacity: .85;
 }
 
 .preview h3 {
+  color: white;
   font-size: 1.25em;
   padding: .5em;
   font-weight: 100;
@@ -390,9 +381,12 @@ a.link-selected {
 }
 
 .preview .text span {
-  border: 2px solid white;
+  border: 1px solid white;
   border-radius: 1em;
-  padding: .5em;
+  padding-top: .125em;
+  padding-bottom: .125em;
+  padding-left: .25em;
+  padding-right: .25em;
 }
 
 .slides-wrapper {
@@ -423,8 +417,6 @@ a.link-selected {
   font-size: 1em;
   z-index: 1002;
 }
-
-
 
 .slider {
     width: 90vw;
@@ -554,6 +546,36 @@ a.link-selected {
       font-size: .85em;
     }
 
+    .gallery-backer-space1 {
+      background-size: auto 100%;
+      background-position: 50% 0%;
+    }
+
+    .title {
+      position: absolute;
+      margin-top: 40vh;
+      margin-left: 67vw;
+      color:white;
+      white-space: nowrap;
+    }
+
+    .title h1 {
+      font-size: 3.6em;
+    }
+
+    .sub-title {
+      position: absolute;
+      float: left;
+      margin-top: 60vh;
+      margin-left: 17vw;
+      color:white;
+      white-space: nowrap;
+    }
+
+    .sub-title h3{
+      font-size: 1.5em;
+    }
+
     /*.landing-wrapper{
       text-align: center;
     }*/
@@ -615,16 +637,28 @@ a.link-selected {
       font-size: 1.6em; 
     }
 
+    .gallery-wrapper {
+      padding-top: 6vw;
+      padding-bottom: 6vw;
+    }
+
     .previews-wrapper {
-      width: 80%;
-      margin-left: 10%;
+
+      margin: 10vw;
+      width: 80vw;
+      /*margin-left: 10%;*/
+      background-color: #E8E8E7;
     }
 
     .preview {
-      width: 48%;
-      height: 31vw;
+      width: 36vw;
+      height: 24vw;
+      margin-left: 16px;
+      margin-top: 16px;
       display: inline-block;
+      background-color: white;
       white-space: nowrap;
+      border-radius: 4px;
     }
 
     .slides-wrapper {
@@ -750,6 +784,38 @@ a.link-selected {
       font-size: 1em;
     }
 
+    .gallery-backer-space1 {
+      background-size: auto 100%;
+      background-position: 50% 0%;
+    }
+    
+
+    .title {
+      position: absolute;
+      margin-top: 40vh;
+      margin-left: 57vw;
+      color:white;
+      white-space: nowrap;
+    }
+
+    .title h1 {
+      font-size: 4em;
+    }
+
+    .sub-title {
+      position: absolute;
+      float: left;
+      margin-top: 60vh;
+      margin-left: 17vw;
+      color:white;
+      white-space: nowrap;
+    }
+
+    .sub-title h3{
+      font-size: 1.5em;
+    }
+
+
      /*.landing-wrapper{
       text-align: center;
     }*/
@@ -812,18 +878,30 @@ a.link-selected {
       margin: 0;
     }
 
+
+    .gallery-wrapper {
+      padding-top: 6vw;
+      padding-bottom: 6vw;
+    }
+
     .previews-wrapper {
-      /*width: 80%;
-      margin-left: 10%;*/
+
+      margin: 15vw;
+      width: 70vw;
+      /*margin-left: 10%;*/
+      background-color: #E8E8E7;
     }
 
     .preview {
-      width: 32%;
-      height: 20vw;
+      width: 32.5vw;
+      height: 24vw;
+      margin-left: 16px;
+      margin-top: 16px;
       display: inline-block;
+      background-color: white;
       white-space: nowrap;
+      border-radius: 4px;
     }
-
 
 
     .slides-wrapper {
@@ -923,43 +1001,6 @@ a.link-selected {
       white-space: nowrap;
     }*/
 
-
-
-  h3 {
-    color: #575B5A;
-  } 
-
-  p {
-    color: gray;
-    font-size: .77em;
-  }
-
-  .header {
-    background-color: white;
-  }
-
-  .header img{
-    margin-left: 2vw;
-    top: 0;
-    position: absolute;
-    height: 10vh;
-  }
-  .nice-home {
-    position: relative;
-  }
-
-  .title {
-    margin-top: 80vh;
-    margin-left: 67vw;
-    color:white;
-  }
-
-  .phil2 {
-    padding: 4em;
-    margin-top: 40vh;
-    background-color: white;
-  }
-
   .gallery-doors {
     position: absolute;
     top: 0;
@@ -997,14 +1038,6 @@ a.link-selected {
     background-size: cover;
     background-position: 0% 0%;
   }
-
-  /*.open-left{
-    margin-left: 50px;
-  }
-
-  .open-right{
-    margin-left: 150%;
-  }*/
 
   .gallery-doors h5 {
     position: absolute;
