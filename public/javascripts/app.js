@@ -4,11 +4,11 @@ var app = angular.module('klinttiley', ['ngRoute', 'ui.bootstrap', 'ngAnimate'])
    $routeProvider
     .when('/', {
       templateUrl: 'partials/home.html',
-      controller: 'homeController'
+      controller: 'portfolioController'
     })
     .when('/home', {
       templateUrl: 'partials/home.html',
-      controller: 'homeController'
+      controller: 'portfolioController'
     })
     .when('/portfolio', {
       templateUrl: 'partials/portfolio.html',

@@ -1,4 +1,4 @@
-<div class='gallery-backer-black'>
+<div class='backer-black'>
 </div>
 <div class='backer-movement-window'>
   <div class='gallery-backer-space1' ng-style="styleFadeOut">
@@ -14,11 +14,89 @@
   </div>
 </div>
 <div class='phil2'>
-  <h3>Philosophy</h3>
-  <p>DIY etsy pickled waistcoat, normcore pinterest pabst biodiesel chicharrones sriracha. Freegan sustainable PBR&B cold-pressed mixtape chartreuse before they sold out pour-over, migas VHS art party gastropub cliche ethical. Raw denim stumptown ethical sriracha flannel. Messenger bag retro mustache 8-bit. Before they sold out cardigan salvia pabst, food truck listicle pop-up polaroid try-hard.</p>
+  <h3>I dream..</h3>
+  <p>Sometimes at night I dream about flying planes, wrestling bears, or seeing friends and family who I have not visited for a long time. But mostly... I DREAM ABOUT CODE.</p>
 </div>
 <div class='techs-wrapper'>
   <h3> Technologies </h3>
-  <p>DIY etsy pickled waistcoat, normcore pinterest pabst biodiesel chicharrones sriracha.</p>
+  <p>The following are some of the languages, frameworks, libraries, and technologies that reside within my wheelhouse.</p>
   <img class='tech-logos' src="/images/backers/tech-logos.png">
+</div>
+
+<div class='gallery-wrapper'>
+  <h1>Portfolio</h1>
+    <div class='previews-wrapper' ng-show='showPreviewsWrapper' >
+      <div class='preview'>
+        <img src="images/upnote/upnote_landing.png">
+        <div class='text' >
+          <h3>Upnote </h3>
+          <p>Ruby<br>Rails<br>SQLite3<br><br><span class='hover' ng-click="showSlidesWindow(0)">View slides</span></p>
+        </div>
+      </div><div class='preview'>
+        <img src="images/geo_planner/geo-landing.png">
+        <div class='text'>
+          <h3>GEO Planner</h3>
+          <p>Javascript<br>Express<br>MongoDB<br>Angular<br>Google Maps API<br><br><span class='hover' ng-click="showSlidesWindow(1)">View slides</span></p>
+        </div>
+      </div
+      ><div class='preview'>
+        <img src="images/flyers_forum/flyers_landing.png">
+        <div class='text'>
+          <h3>Flyers Forum</h3>
+          <p>Ruby<br>Rails<br>SQLite3<br><br><span class='hover' ng-click="showSlidesWindow(2)">View slides</span></p>
+        </div>
+      </div
+      ><div class='preview'>
+        <img src="images/rocket/rocket_success.png">
+        <div class='text'>
+          <h3>Rocket</h3>
+          <p>Javascript<br>Express<br>MongoDB<br>jQuery<br><br><span class='hover' ng-click="showSlidesWindow(3)">View slides</span></p>
+        </div>
+      </div
+      ><div class='preview'>
+        <img class='vert' src="images/agent/agent_sq2.png" >
+        <div class='text'>
+          <h3>Agent</h3>
+          <p>Xcode<br>Swift<br><br><span class='hover' ng-click="showSlidesWindow(4)">View slides</span></p>
+        </div>
+      </div
+      ><div class='preview'>
+        <img src="images/nyt-top-ten/nyt_sample.jpg">
+        <div class='text'>
+          <h3>NYT List</h3>
+          <p>Javascript<br>Express/NYT API<br><br><span class='hover' ng-click="showSlidesWindow(5)">View slides</span></p>
+        </div>
+      </div>
+    </div>
+    <div class='slides-wrapper' ng-show='showSlidesWrapper'>
+      <h6 class="hover" ng-click='hideSlidesWindow()'>back</h6>
+      <div class="slider">
+        <img ng-repeat="slide in slides"  class="slide-animation"
+            ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+        <i class="fa fa-angle-left  arrow-left hover"  ng-click="prevSlide()"></i>
+        <i class="fa fa-angle-right arrow-right hover" ng-click="nextSlide()"></i>
+        <div class='dots-container'>
+          <div class='dots' ng-repeat="slide in slides">
+            <i class="fa fa-circle" ng-hide="isCurrentSlideIndex($index)"></i>
+            <i class="fa fa-circle-thin" ng-hide="!isCurrentSlideIndex($index)"></i>
+          </div>
+        </div>  
+      </div>
+      <div class='text'>
+        <p ng-repeat="slide in slides" ng-class="{'active':isCurrentSlideIndex($index)}" ng-hide="!isCurrentSlideIndex($index)">{{slide.description}}</p>
+      </div>
+      
+    </div>
+</div>  <!-- End gallery wrapper -->
+
+<div class='about-intro'>
+  <div class='left'>
+    <div class='container'>
+      <h1>Hello!</h1>
+      <p>Hi everyone. My name is Klint, and I am a coding addict.<br> <br>I'm a Full-Stack developer with experience in HTML, CSS, jQuery, Angular, Express, Node, Ruby, Rails, MongoDB, PostgreSQL, SQLite and more. I enjoy solving coding problems across the stack including UI/UX, server, API, and database related challenges.</p>
+    </div>  
+  </div
+  ><div class='right'>
+  </div>
+
 </div>

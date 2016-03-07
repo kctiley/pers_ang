@@ -1,7 +1,7 @@
 
 app.controller('indexController', ['$scope', '$route', '$rootScope', function($scope, $route,$rootScope) {
   // Use path to change highlight of page link
-  $scope.linkCollection = ["home", "portfolio","about","contact" ];
+  $scope.linkCollection = ["home", "contact","portfolio","about" ];
   $scope.linkStyle;
   $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {
       var path = current.$$route.originalPath ;
