@@ -77,22 +77,35 @@ a.link-selected {
   position: relative;
 }
 
+.bottom-shade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+    background: -webkit-linear-gradient(transparent, black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(transparent, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(transparent, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(transparent, black); /* Standard syntax (must be last) */
+  opacity: .95;
+}
+
+
 .title {
   /*position: absolute;*/
-  /*margin-top: 50vh;*/
+  margin-top: 10vh;
   /*margin-left: 57vw;*/
   white-space: wrap;
-  text-shadow: -1px 1px 0px black;
+  /*text-shadow: -1px 1px 0px black;*/
   letter-spacing: 3px;
 }
 
 .title h1 {
-  color: white;
+  /*color: white;*/
   color: #2DC0FA;
   font-size: 2.5em;
-  /*margin-left: -200px;*/
   font-weight: 400;
-  
+
 }
 
 .sub-title {
@@ -110,18 +123,19 @@ a.link-selected {
   /*color: #C7FB1C;*/
   /*color: #2DC0FA;*/
   color: #DB0FD7;
+  z-index: 6000;
 }
 
 .title-container {
   margin-top: 0%;
   height: 100vh;
   text-align: center;
-  background:  rgba(15,9,9,0.4);
+  background:  rgba(15,9,9,0.2);
 }
 
 .title-container img {
-  padding-top: 20vh;
-  height: 40vh;
+  padding-top: 15vh;
+  height: 50vh;
 }
 
 .phil2 {
@@ -246,8 +260,6 @@ a.link-selected {
   padding-top: 6vw;
   padding-bottom: 6vw;
   width: 100%;
-  /*background: white;*/
-  /*background-color: #E8E8E7;*/
   background-color: #CFCECE;
 }
 
@@ -343,19 +355,35 @@ a.link-selected {
   width: 90vw;
   height: 66vw;
   margin-left: 5%;
+
 }
 
 .slides-wrapper .text {
+  margin-top: 10px;
+  margin-left: 10%;
   width: 80%;
-  height: 10%;
+  /*height: 10%;*/
+  background-color: white;
+  color: black;
+
 }
 
 .slides-wrapper .text h4{
   font-size: .8em;
 }
 
+.slides-wrapper h5 { 
+  color: #2DC0FA;
+  padding: 10px;
+  /*padding-left: 10px;
+  padding-right: 10px; */
+ }
+
 .slides-wrapper .text p{
   font-size: .64em;
+  padding: 10px;
+  /*padding-left: 10px;
+  padding-right: 10px;*/
 }
 
 #slides-buttons {
@@ -585,7 +613,11 @@ a.link-selected {
     }
 
     .techs-wrapper {
-      padding: 5%
+      padding: 6em;
+    }
+
+    .phil2 {
+      padding: 6em;
     }
 
     .phil2 h3, .techs-wrapper h3 {
@@ -778,6 +810,10 @@ a.link-selected {
     }
 
     .techs-wrapper {
+      padding: 6em;
+    }
+
+    .phil2 {
       padding: 6em;
     }
 

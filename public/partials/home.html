@@ -7,9 +7,11 @@
     <!-- <a href='/{{item}}' id="{{item}}-link"  ng-repeat="item in linkCollection">
       {{item}}
     </a> -->
-    <a>ABOUT</a>
+    <!-- <a href='#about'>ABOUT</a>
     <a>CONTACT</a>
     <a>PORTFOLIO</a>
+    <a ng-click="goToContact()">Go to bottom</a> -->
+  
     
   </div>
 </div>
@@ -19,20 +21,22 @@
 <div class='backer-movement-window'>
   <div class='gallery-backer-space1' ng-style="styleFadeOut">
     
-    
-  </div>
+    <div class='bottom-shade'>
+          <!-- bottom shade -->
+        </div>  
+    </div>
   <div class='gallery-backer-space2' ng-style="styleFadeIn">
   </div>
   
 </div>
 <div class='title-container'>
-  <img src="/images/logo-color.png">
-  <div class='title'  ng-style="styleFlowHorizTitle">
+  <img  src="/images/logo-color.png">
+  <div class='title'  ng-style="styleTitle">
     <!-- <h1>&lt;klint-the-human&gt;</h1> -->
-      <h1>klint tiley</h1>
+      <h1 ng-style='styleTitleH1'>klint tiley</h1>
     </div>
-    <div class='sub-title'  ng-style="styleFlowHorizSubTitle">
-      <h3>Web Developer</h3>
+    <div class='sub-title'  ng-style="styleSubTitle">
+      <h3 ng-style='styleSubTitleH3'>Web Developer</h3>
     </div>
 </div>
 <div class='phil2'>
@@ -91,7 +95,7 @@
       </div>
     </div>
     <div class='slides-wrapper' ng-show='showSlidesWrapper'>
-      <h6 class="hover" ng-click='hideSlidesWindow()'>back</h6>
+
       <div class="slider">
         <img ng-repeat="slide in slides"  class="slide-animation"
             ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
@@ -104,13 +108,16 @@
           </div>
         </div>  
       </div>
+
       <div class='text'>
         <p ng-repeat="slide in slides" ng-class="{'active':isCurrentSlideIndex($index)}" ng-hide="!isCurrentSlideIndex($index)">{{slide.description}}</p>
+        <h5 class="hover" ng-click='hideSlidesWindow()'>back</h5>
       </div>
+      
       
     </div>
 </div>  <!-- End gallery wrapper -->
-
+<a name="about"></a>
 <div class='about-intro'>
   <div class='left'>
     <div class='container'>
@@ -125,6 +132,7 @@
 </div>
 <div class='contact-container'>
   <h3>Contact</h3>
+  <!-- <a id="bottom"></a> -->
   <div class='icons'>
     <h2><a href="mailto:kctiley@gmail.com"<i class="fa fa-envelope"></i></a></h2>
     <h2><a href="https://www.linkedin.com/in/klint-tiley-90323029"><i class="fa fa-linkedin"></i></a></h2>

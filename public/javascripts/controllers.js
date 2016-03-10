@@ -22,7 +22,24 @@ app.controller('homeController', ['$scope', function($scope) {
 
 }]);
 
-app.controller('portfolioController', ['$scope', function($scope) {
+app.controller('portfolioController', ['$scope', '$location', '$anchorScroll', function($scope, $location, $anchorScroll) {
+  
+
+  // $scope.goToContact = function() {
+  //     // set the location.hash to the id of
+  //     // the element you wish to scroll to.
+  //     $location.hash('contact');
+
+  //     // call $anchorScroll()
+  //     $anchorScroll();
+  //   };
+
+
+
+
+
+
+
   $scope.showPreviewsWrapper = true;
   $scope.showSlidesWrapper = false;
   $scope.showSlidesWindow = function(slideGroupIndex){
@@ -196,17 +213,24 @@ app.directive("scroll", function ($window) {
             //      scope.boolChangeClass = false;
             //      console.log('Header is in view.');
             //  }
+            console.log(Yoff)
             var Yoff = this.pageYOffset;
+            console.log(Yoff);
             var moveX = Yoff * .01 - 66 + "%";
             var moveTitle = 57 + (Yoff * .25) + "vw";
-            var moveTitle2 = "+=" + (Yoff * .75) + "vw";
+            var moveTitle2 = "-=" + (Yoff * 1.05) + "vw";
+            var shrinkTitle = "-=" + (Yoff * .15) + "em";
+            var shrinkSubTitle = "-=" + (Yoff * .05) + "em";
+            var shrinkLogo = "-=" + (Yoff * 1.55) + "vh";
             var moveSubTitle = 17 - (Yoff * .25) + "vw";
-            var moveSubTitle2 = "-=" + (Yoff * .45) + "vw";
+            var moveSubTitle2 = "-=" + (Yoff * .55) + "vw";
             var moveY = -(Yoff * .02) + "%";
             //title
-            scope.styleFlowHorizTitle = {'margin-left': moveTitle2,"white-space": "nowrap" };
-            scope.styleFlowHorizSubTitle = {'margin-left': moveSubTitle2,"white-space": "nowrap" };
-
+            scope.styleTitle = {'margin-top': moveTitle2, "white-space": "nowrap" };
+            scope.styleSubTitle = {'margin-top': moveSubTitle2, "white-space": "nowrap" };
+            scope.styleTitleH1 = {"font-size" : shrinkTitle};
+            scope.styleSubTitleH3 = {"font-size" : shrinkSubTitle};
+            scope.styleLogo = {"height": shrinkLogo, "z-index": "8000"};
             // Stars
             scope.styleFlowHoriz = {'margin-left': moveX};
             // Planets

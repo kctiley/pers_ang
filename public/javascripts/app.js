@@ -14,10 +14,10 @@ var app = angular.module('klinttiley', ['ngRoute', 'ui.bootstrap', 'ngAnimate'])
       templateUrl: 'partials/portfolio.html',
       controller: 'portfolioController'
     })
-    .when('/about', {
-        templateUrl: 'partials/about.html',
-        controller: 'aboutController'
-      })
+    // .when('/about', {
+    //     templateUrl: 'partials/about.html',
+    //     controller: 'aboutController'
+    //   })
     .when('/contact', {
       templateUrl: 'partials/contact.html',
         controller: 'contactController'
