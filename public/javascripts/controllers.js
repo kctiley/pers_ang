@@ -199,11 +199,13 @@ app.directive("scroll", function ($window) {
             var Yoff = this.pageYOffset;
             var moveX = Yoff * .01 - 66 + "%";
             var moveTitle = 57 + (Yoff * .25) + "vw";
+            var moveTitle2 = "+=" + (Yoff * .75) + "vw";
             var moveSubTitle = 17 - (Yoff * .25) + "vw";
+            var moveSubTitle2 = "-=" + (Yoff * .45) + "vw";
             var moveY = -(Yoff * .02) + "%";
             //title
-            scope.styleFlowHorizTitle = {'margin-left': moveTitle, "margin-top": "40vh", "color": "white", "white-space": "nowrap" };
-            scope.styleFlowHorizSubTitle = {'margin-left': moveSubTitle, "margin-top": "60vh", "color": "white", "white-space": "nowrap" };
+            scope.styleFlowHorizTitle = {'margin-left': moveTitle2,"white-space": "nowrap" };
+            scope.styleFlowHorizSubTitle = {'margin-left': moveSubTitle2,"white-space": "nowrap" };
 
             // Stars
             scope.styleFlowHoriz = {'margin-left': moveX};

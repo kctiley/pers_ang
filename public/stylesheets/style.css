@@ -22,20 +22,9 @@
 }
 
 body {
-  /*font-family: Verdana, Geneva, sans-serif;*/
   font-family: 'Open Sans', sans-serif;
 }
 
-/*h3 {
-  color: #575B5A;
-  color: black;
-}*/ 
-
-/*p {
-  color: white;
-  font-size: .77em;
-}
-*/
 .header {
   width: 100%;
   position: fixed;
@@ -50,7 +39,7 @@ body {
   margin-left: 2vw;
   top: 0;
   position: absolute;
-  height: 100%;
+  height: 150%;
 }
 
 .header h2 {
@@ -89,94 +78,68 @@ a.link-selected {
 }
 
 .title {
-  position: absolute;
-  margin-top: 40vh;
-  margin-left: 57vw;
-  color:white;
+  /*position: absolute;*/
+  /*margin-top: 50vh;*/
+  /*margin-left: 57vw;*/
   white-space: wrap;
-  text-shadow: -4px 4px 0px black;
+  text-shadow: -1px 1px 0px black;
   letter-spacing: 3px;
 }
 
 .title h1 {
+  color: white;
+  color: #2DC0FA;
   font-size: 2.5em;
-  margin-left: -120px;
+  /*margin-left: -200px;*/
   font-weight: 400;
+  
 }
 
 .sub-title {
-  position: absolute;
-  float: left;
-  margin-top: 60vh;
-  margin-left: 17vw;
+  /*position: absolute;*/
+  /*float: left;*/
+  /*margin-top: 60vh;*/
+  /*margin-left: 17vw;*/
   white-space: nowrap;
   text-shadow: -1px 1px 0px black;
 }
 
 .sub-title h3 {
   font-size: 1em;
-  margin-left: 50px;
-  color: #C7FB1C;
-  color: #2DC0FA;
+  /*margin-left: 250px;*/
+  /*color: #C7FB1C;*/
+  /*color: #2DC0FA;*/
+  color: #DB0FD7;
+}
+
+.title-container {
+  margin-top: 0%;
+  height: 100vh;
+  text-align: center;
+  background:  rgba(15,9,9,0.4);
+}
+
+.title-container img {
+  padding-top: 20vh;
+  height: 40vh;
 }
 
 .phil2 {
-  padding: 6em;
-  margin-top: 94vh;
+  padding: 2em;
+  /*margin-top: 94vh;*/
   background-color: white;
 }
 
-.phil2 h3 {
+.phil2 h3, .techs-wrapper h3 {
   font-weight: 400;
-  font-size: 2em;
+  font-size: 1.2em;
 }
 
-.phil2 p {
+.phil2 p, .techs-wrapper p {
   font-weight: 100;
   font-size: .88em;
-}
-
-.doors-movement-window {
-  position: fixed;
-  overflow: hidden;
-  width: 100%;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  z-index: 2000;
-}
-
-.doors-movement-window .left-door {
-  position: absolute;
-  left: 0;
-  width: 50%;
-  height: 100vh;
-  background-image: url("/images/backers/skydoorleft.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 100% 0%;
-}
-.doors-movement-window .right-door {
-  position: absolute;
-  margin-left: 50%;
-  width: 50%;
-  height: 100vh;
-  background-image: url("/images/backers/skydoorright.png");
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-size: cover;
-  background-position: 0% 0%;
-}
-
-.home-backer-bluesky {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  z-index: -2000;
-  /*background-color: rgb(35, 244, 223);*/
-  background-color: rgba(35, 164, 244, .5);
+  line-height: 1.5;
+  padding: 10px;
 }
 
 .backer-black {
@@ -188,6 +151,7 @@ a.link-selected {
   z-index: -2000;
   /*background-color: rgb(35, 244, 223);*/
   background-color: black;
+  background-color: gray;
 }
 
 .backer-movement-window {
@@ -198,6 +162,7 @@ a.link-selected {
   left: 0;
   height: 100vh;
   z-index: -1000;
+  text-align: center;
 }
 
 .home-backer-stars {
@@ -219,12 +184,20 @@ a.link-selected {
   width: 100%;
   height: 100%;
   /*z-index: -1000;*/
-  background-image: url("/images/backers/space1.jpg");
+  /*background-image: url("/images/backers/space1.jpg");*/
   background-image: url("/images/backers/space_moon1.jpg");
+  background-image: url("/images/backers/street_double.jpeg");
+
   /*background-image: url("/images/backers/grass.jpg");*/
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size: cover;
   background-position: 50% 0%;
+}
+
+.gallery-backer-space1 img{
+  height: 40vh;
+  margin-left: 33%;
+  margin-top: 5vw;
 }
 
 .gallery-backer-space2 {
@@ -237,62 +210,12 @@ a.link-selected {
   /*z-index: -1000;*/
   background-image: url("/images/backers/space_center.jpg");
   background-image: url("/images/backers/space2.jpg");
+  background-image: url("/images/backers/city.jpg");
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size: cover;
   background-position: 50% 0%;
 }
 
-.home-backer-planets {
-  position: absolute;
-  top: 0;
-  margin-left: 0;
-  margin-top: 0%;
-  width: 100%;
-  height: 300%;
-  /*height: 100%;*/
-  /*z-index: -1000;*/
-  background-image: url("/images/backers/planets1.png");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-
-}
-
-.landing-wrapper {
-  margin-top: 0;
-  height: 100vh;
-  text-align: center;
-}
-
-.landing-wrapper img{
-  width: 70vw;
-  margin-top: 20vh;
-  height: 70vw;
-  background-color: white;
-  border-radius: 3vw;
-}
-
-.landing-wrapper h1{
-  font-size: 1.25em;
-  font-weight: 700;
-  color: black;
-  opacity: .7;
-}
-
-.philosophy-wrapper {
-  /*background:  rgba(15,9,9,0.4);*/
-  color: black;
-  background-color: white;
-  margin-top: 50vh;
-  width: 50%;
-  padding: 5%;
-  border-radius: 4em;
-  box-shadow: 5px 5px 5px black;
-}
-
-.philosophy-wrapper h1{
-  font-size: 1em;
-  color: orange;
-}
 
 .phil2 h3 {
   color: #5C5D59;
@@ -303,25 +226,11 @@ a.link-selected {
   color: gray;
 }
 
-.philosophy-wrapper p{
-  font-size: .7em;
-}
-
 .techs-wrapper {
   background:  rgba(15,9,9,0.7);
   color: white;
   margin-top: 50vh;
-  padding: 6em;
-}
-
-.techs-wrapper h3 {
-  font-weight: 400;
-  font-size: 2em;
-}
-
-.techs-wrapper p {
-  font-weight: 100;
-  font-size: .88em;
+  padding: 2em;
 }
 
 .tech-logos {
@@ -338,7 +247,8 @@ a.link-selected {
   padding-bottom: 6vw;
   width: 100%;
   /*background: white;*/
-  background-color: #E8E8E7;
+  /*background-color: #E8E8E7;*/
+  background-color: #CFCECE;
 }
 
 .gallery-wrapper h1 {
@@ -512,29 +422,32 @@ a.link-selected {
 .about-intro {
   /*margin-top: 100px;*/
   width: 100vw;
-  height: 100vh;
-  background-color: gray;
+  /*height: 100vh;*/
+  /*background-color: #CFCECE;*/
+  background:  rgba(15,9,9,0.7);
 }
 
 .about-intro .left{
+  /*margin-top: 20vh;*/
   vertical-align: top;
-  display: inline-block;
-  width: 50%;
-  height: 50vw;
+  display: block;
+  width: 100vw;
+  height: 100vw;
   background-color: white;
 }
 .about-intro .right{
+  /*margin-top: 20vh;*/
   vertical-align: top;
   display: inline-block;
-  width: 50%;
-  height: 50vw;
+  width: 100vw;
+  height: 100vw;
   background-image: url("/images/about_pics/mirror-quote.jpeg");
   background-size: auto 100%;
 }
 
 .about-intro h1 {
   font-family: 'Pacifico', cursive;
-  margin-top: 15vh;
+  margin-top: 4vh;
 }
 
 .about-intro p {
@@ -557,68 +470,72 @@ a.link-selected {
   color: white;
 }
 
-/*.about {
-  width: 80vw;
-  margin-left: 10vw;
-  margin-top: 100vw;
-  z-index: 1002;
-  background-color: gray;
-}
 
-.intro {
-  width:100%;
-  margin-top: 8vw;
-}
 
-.intro-text{
-  display: block;
-  width: 80vw;
-  margin-left: 0;
-  text-align: left;
-}
 
-.intro .intro-text h1{
-  font-size: 1em;
-  margin-bottom: .66em;
-  font-weight: 600;
-
-}
-
-.intro-text .professional{
-  font-size: .7em;
-  margin-bottom: .66em;
-  font-weight: 300;
-
-}
-
-.intro-text .fun{
-  font-size: .65em;
-  font-weight: 300;
-
-}
-
-.my-pic {
-  display: block;
-}
-
-.my-pic img{
-  display: block;
-  width: 42vw;
-  height: 45vw;
-  margin-left: 20vw;
-  border-radius: 8vw;
-  margin-top: 10vw;
-}
-
-.hobbies-wrapper {
+.home-backer-bluesky {
+  position: fixed;
   width: 100%;
-  margin-top: 2vw;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: -2000;
+  /*background-color: rgb(35, 244, 223);*/
+  background-color: rgba(35, 164, 244, .5);
 }
 
-.hobbies-wrapper img{
-  display: block;
-  width: 30%;
-}*/
+
+.home-backer-planets {
+  position: absolute;
+  top: 0;
+  margin-left: 0;
+  margin-top: 0%;
+  width: 100%;
+  height: 300%;
+  /*height: 100%;*/
+  /*z-index: -1000;*/
+  background-image: url("/images/backers/planets1.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+}
+
+.landing-wrapper {
+  margin-top: 0;
+  height: 100vh;
+  text-align: center;
+}
+
+.landing-wrapper img{
+  width: 70vw;
+  margin-top: 20vh;
+  height: 70vw;
+  background-color: white;
+  border-radius: 3vw;
+}
+
+.landing-wrapper h1{
+  font-size: 1.25em;
+  font-weight: 700;
+  color: black;
+  opacity: .7;
+}
+
+.contact-container {
+  padding: 6em;
+  /*background-color: gray;*/
+  background-color: #424242;
+  height: 80vh;
+  text-align: center;
+}
+
+.contact-container h3{
+  font-size: 2em;
+  font-weight: 400;
+  padding-top: 20vh;
+  margin-bottom: 10vh;
+  color: #2DC0FA;
+}
 
 @media screen and (max-width:800px) and (min-width:540px)
   {
@@ -639,9 +556,9 @@ a.link-selected {
     }
 
     .title {
-      position: absolute;
-      margin-top: 40vh;
-      margin-left: 67vw;
+      /*position: absolute;*/
+      /*margin-top: 40vh;*/
+      /*margin-left: 67vw;*/
       color:white;
       white-space: nowrap;
     }
@@ -651,10 +568,10 @@ a.link-selected {
     }
 
     .sub-title {
-      position: absolute;
-      float: left;
-      margin-top: 60vh;
-      margin-left: 17vw;
+      /*position: absolute;*/
+      /*float: left;*/
+      /*margin-top: 60vh;*/
+      /*margin-left: 17vw;*/
       color:white;
       white-space: nowrap;
     }
@@ -663,52 +580,24 @@ a.link-selected {
       font-size: 1.5em;
     }
 
-    /*.landing-wrapper{
-      text-align: center;
-    }*/
-  
-    .landing-wrapper img{
-      width: 40vw;
-      height: 40vw;
-      margin-top: 13vh;
-    }
-
-    .landing-wrapper h1{
-      font-size: 1.7em;
-    }
-
-    .philosophy-wrapper {
-      padding: 5%;
-    }
-
     .philosophy-wrapper h1{
       font-size: 1.4em;
-    }
-
-
-    .gallery-intro-wrapper h1{
-      font-size: 1.1em;
-    }
-
-    .gallery-intro-wrapper p{
-      font-size: .77em;
-      font-weight: 100;
-    }
-
-    .philosophy-wrapper p{
-      font-size: .8em;
     }
 
     .techs-wrapper {
       padding: 5%
     }
 
-    .techs-wrapper h1{
-      font-size: 1.4em;
+    .phil2 h3, .techs-wrapper h3 {
+      font-weight: 400;
+      font-size: 1.8em;
     }
 
-    .techs-wrapper p{
-      font-size: .8em;
+    .phil2 p, .techs-wrapper p {
+      font-weight: 100;
+      font-size: 1em;
+      line-height: 1.5;
+      padding: 10px;
     }
 
 
@@ -801,57 +690,33 @@ a.link-selected {
       font-size: .65em;
     }
 
-
-    .intro-text {
-      display: inline;
-      float: left;
+    .about-intro {
+      width: 100vw;
+      /*height: 100vh;*/
     }
 
-    .my-pic img {
-      display: inline;
-      float: left;
-      width: 28vw;
-      height: 30vw;
-      margin-left: 10vw;
-      border-radius: 60vw;
-      margin-top: 0;
+    .about-intro .left{
+      display: inline-block;
+      width: 50%;
+      height: 50vw;
+    }
+    .about-intro .right{
+      display: inline-block;
+      width: 50%;
+      height: 50vw;
     }
 
-
-    .intro-text{
-      display: block;
-      width: 34vw;
-      margin-left: 0;
-      text-align: left;
+    .about-intro h1 {
+      font-family: 'Pacifico', cursive;
+      margin-top: 3vh;
     }
 
-    .intro .intro-text h1{
-      font-size: 1.1em;
-      margin-bottom: .5em;
-      font-weight: 800;
+    .about-intro p {
+      margin-top: 10px;
+      font-weight: 100;
+      font-size: .88em;
 
     }
-
-    .intro-text .professional{
-      font-size: .8em;
-      margin-bottom: 1em;
-    }
-
-    .intro-text .fun{
-      font-size: .7em;
-    }
-
-    .hobbies-wrapper {
-      margin-top: 2vw;
-    }
-
-    .hobbies-wrapper img{
-      display: inline;
-      width: 19%;
-      margin-left: 1%;
-      
-    }
-
 
 }
 
@@ -871,18 +736,18 @@ a.link-selected {
       font-size: 1em;
     }
 
-    .gallery-backer-space1 {
-      background-size: auto 100%;
+    /*.gallery-backer-space1 {
+      background-size: 100% auto;
       background-position: 50% 0%;
-    }
+    }*/
     
 
     .title {
-      position: absolute;
-      margin-top: 40vh;
-      margin-left: 57vw;
-      color:white;
-      white-space: nowrap;
+      /*position: absolute;*/
+      /*margin-top: 30vh;*/
+      /*margin-left: 57vw;*/
+      /*color:white;*/
+      /*white-space: nowrap;*/
     }
 
     .title h1 {
@@ -890,10 +755,10 @@ a.link-selected {
     }
 
     .sub-title {
-      position: absolute;
-      float: left;
-      margin-top: 60vh;
-      margin-left: 17vw;
+      /*position: absolute;*/
+      /*float: left;*/
+      /*margin-top: 60vh;*/
+      /*margin-left: 17vw;*/
       color:white;
       white-space: nowrap;
     }
@@ -901,11 +766,6 @@ a.link-selected {
     .sub-title h3{
       font-size: 1.5em;
     }
-
-
-     /*.landing-wrapper{
-      text-align: center;
-    }*/
 
     .landing-wrapper img{
       width: 36vw;
@@ -917,45 +777,20 @@ a.link-selected {
       font-size: 2em;
     }
 
-    .philosophy-wrapper {
-      padding: 5%;
-    }
-
-    .philosophy-wrapper h1{
-      font-size: 1.8em;
-    }
-
-    .philosophy-wrapper p{
-      font-size: .9em;
-    }
-
-
-    .gallery-intro-wrapper h1{
-      font-size: 1.1em;
-    }
-
-    .gallery-intro-wrapper p{
-      font-size: .77em;
-    }
-
-
     .techs-wrapper {
       padding: 6em;
     }
 
-    .techs-wrapper h1{
-      font-size: 1.1em;
+    .phil2 h3, .techs-wrapper h3 {
+      font-weight: 400;
+      font-size: 2em;
     }
 
-    .techs-wrapper p{
-      font-size: .77em;
-    }
-
-    .gallery-previews-wrapper h1{
+    .phil2 p, .techs-wrapper p {
+      font-weight: 100;
       font-size: 1.1em;
-    }
-    .gallery-previews-wrapper p{
-      font-size: .77em;
+      line-height: 1.5;
+      padding: 10px;
     }
 
     .page-title {
@@ -964,7 +799,6 @@ a.link-selected {
       border: 0;
       margin: 0;
     }
-
 
     .gallery-wrapper {
       padding-top: 6vw;
@@ -1041,104 +875,33 @@ a.link-selected {
       font-size: .75em;
     }
 
-    .my-pic img {
-      display: inline;
-      float: left;
-      width: 28vw;
-      height: 30vw;
-      margin-left: 10vw;
-      border-radius: 60vw;
-      margin-top: 0;
+    .about-intro {
+      width: 100vw;
+      /*height: 100vh;*/
     }
 
-    .intro-text{
-      float: left;
-      display: inline;
-      width: 34vw;
-      margin-left: 0;
-      text-align: left;
-    }
-
-    .intro .intro-text h1{
-      font-size: 2em;
-      margin-bottom: 1em;
-    }
-
-    .intro-text .professional{
-      font-size: .95em;
-      margin-bottom: 1em;
-    }
-
-    .intro-text .fun{
-      font-size: .8em;
-    }
-
-    .hobbies-wrapper img{
-      display: inline;
-      width: 19%;
-      margin-left: 1%;
-      margin-top: 0;
-    }
-
-    /*#red, #yellow, #green, #blue {
-      width: 25%;
+    .about-intro .left{
       display: inline-block;
-      white-space: nowrap;
-    }*/
+      width: 50%;
+      height: 50vw;
+    }
+    .about-intro .right{
+      display: inline-block;
+      width: 50%;
+      height: 50vw;
+    }
 
-  .gallery-doors {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 8000;
-    width: 100%;
-    height: 100vh;
-  }
+    .about-intro h1 {
+      font-family: 'Pacifico', cursive;
+      margin-top: 3vh;
+    }
 
-  .gallery-previews-wrapper {
-    z-index: 7000;
-    position: absolute;
-  }
+    .about-intro p {
+      margin-top: 10px;
+      font-weight: 100;
+      font-size: .99em;
 
-  #left {
-    position: absolute;
-    margin-top: -.25%;
-    margin-left: 0%;
-    width: 50%;
-    height: 100vh;
-    background-image: url("/images/backers/door-left.png");
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-size: cover;
-    background-position: 100% 0%;
-  }
-  #right {
-    position: absolute;
-    margin-left: 50%;
-    width:50%;
-    height: 100vh;
-    background-image: url("/images/backers/door-right.png");
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-size: cover;
-    background-position: 0% 0%;
-  }
-
-  .gallery-doors h5 {
-    position: absolute;
-    margin-top: 70vh;
-    color: white;
-    margin-left: 45%; 
-    font-weight: 100;  
-    border: 1px solid white;
-    opacity: .5;
-    padding-left: .25em; 
-    padding-right: .25em; 
-    border-radius: .25em;
-  }
-
-
-
+    }
 
 
 }
