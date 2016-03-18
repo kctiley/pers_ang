@@ -1,44 +1,25 @@
 
-app.controller('indexController', ['$scope', '$route', '$rootScope', function($scope, $route,$rootScope) {
-  // Use path to change highlight of page link
-  $scope.linkCollection = ["home", "contact","portfolio","about" ];
-  $scope.linkStyle;
-  $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {
-      var path = current.$$route.originalPath ;
-      $scope.linkCollection.forEach(function(path_name){
-        if(path == "/" +  path_name){
-           var linkId = angular.element( document.querySelector( "#" + path_name + "-link" ) );
-           linkId.addClass('link-selected')
-        }
-        else{
-          var linkId = angular.element( document.querySelector( "#" + path_name + "-link" ) );
-          linkId.removeClass('link-selected')
-        }
-      })
-  });
-}]);
+// app.controller('indexController', ['$scope', '$route', '$rootScope', function($scope, $route,$rootScope) {
+//   // $scope.linkCollection = ["home", "contact","portfolio","about" ];
+//   $scope.linkStyle;
+//   // Updates link on route change
+//   $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {
+//       var path = current.$$route.originalPath ;
+//       $scope.linkCollection.forEach(function(path_name){
+//         if(path == "/" +  path_name){
+//            var linkId = angular.element( document.querySelector( "#" + path_name + "-link" ) );
+//            linkId.addClass('link-selected')
+//         }
+//         else{
+//           var linkId = angular.element( document.querySelector( "#" + path_name + "-link" ) );
+//           linkId.removeClass('link-selected')
+//         }
+//       })
+//   });
+// }]);
 
-app.controller('homeController', ['$scope', function($scope) {
-
-}]);
-
-app.controller('portfolioController', ['$scope', '$location', '$anchorScroll', function($scope, $location, $anchorScroll) {
+app.controller('portfolioController', ['$scope', '$location', function($scope, $location) {
   
-
-  // $scope.goToContact = function() {
-  //     // set the location.hash to the id of
-  //     // the element you wish to scroll to.
-  //     $location.hash('contact');
-
-  //     // call $anchorScroll()
-  //     $anchorScroll();
-  //   };
-
-
-
-
-
-
 
   $scope.showPreviewsWrapper = true;
   $scope.showSlidesWrapper = false;
@@ -48,7 +29,6 @@ app.controller('portfolioController', ['$scope', '$location', '$anchorScroll', f
     $scope.slideGroupIndex = slideGroupIndex;
     $scope.slides = $scope.slideGroups[$scope.slideGroupIndex];
   }
-
 
   $scope.hideSlidesWindow = function(){
     $scope.showSlidesWrapper = false;
@@ -96,13 +76,6 @@ app.controller('portfolioController', ['$scope', '$location', '$anchorScroll', f
       return $scope.currentIndex === index;
   };
 
-  // $scope.prevSlide = function () {
-  //     $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
-  // };
-
-  // $scope.nextSlide = function () {
-  //     $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
-  // };
   $scope.prevSlide = function () {
       // slides move right
       $scope.direction = 'right';
@@ -114,17 +87,6 @@ app.controller('portfolioController', ['$scope', '$location', '$anchorScroll', f
       $scope.direction = 'left';
       $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
   };
-
-  $scope.openDoors = function(){
-    console.log("test")
-    $scope.styleLeft = {"margin-left": -40 + "%", "-webkit-transition": "width 2s; /* Safari */",
-    "transition": "width 2s"};
-    // var left = angular.element( document.querySelector( "#left" ) );
-    // left.addClass('open-left');
-    // var right = angular.element( document.querySelector( "#right" ) );
-    // right.addClass('open-right');
-
-  }
 
   // Initial slide show index
   // $scope.currentSlideIndex = 0;
@@ -152,16 +114,6 @@ app.controller('portfolioController', ['$scope', '$location', '$anchorScroll', f
   // }
 
 }]);
-
-app.controller('aboutController', ['$scope', function($scope) {
-
-}]);
-
-app.controller('contactController', ['$scope', function($scope) {
-
-}]);
-
-
 
 app.animation('.slide-animation', function () {
         return {
@@ -206,41 +158,24 @@ app.directive("scroll", function ($window) {
         scope.prevScroll = 0;
       
         angular.element($window).bind("scroll", function() {
-            // if (this.pageYOffset >= 100) {
-            //      scope.boolChangeClass = true;
-            //      console.log('Scrolled below header.');
-            //  } else {
-            //      scope.boolChangeClass = false;
-            //      console.log('Header is in view.');
-            //  }
-            console.log(Yoff)
+            
             var Yoff = this.pageYOffset;
             console.log(Yoff);
-            var moveX = Yoff * .01 - 66 + "%";
-            var moveTitle = 57 + (Yoff * .25) + "vw";
+            // var moveX = Yoff * .01 - 66 + "%";
+            // var moveTitle = 57 + (Yoff * .25) + "vw";
             var moveTitle2 = "-=" + (Yoff * 1.05) + "vw";
             var shrinkTitle = "-=" + (Yoff * .15) + "em";
             var shrinkSubTitle = "-=" + (Yoff * .05) + "em";
-            var shrinkLogo = "-=" + (Yoff * 1.55) + "vh";
-            var moveSubTitle = 17 - (Yoff * .25) + "vw";
+            // var shrinkLogo = "-=" + (Yoff * 1.55) + "vh";
+            // var moveSubTitle = 17 - (Yoff * .25) + "vw";
             var moveSubTitle2 = "-=" + (Yoff * .55) + "vw";
-            var moveY = -(Yoff * .02) + "%";
+            // var moveY = -(Yoff * .02) + "%";
             //title
             scope.styleTitle = {'margin-top': moveTitle2, "white-space": "nowrap" };
             scope.styleSubTitle = {'margin-top': moveSubTitle2, "white-space": "nowrap" };
             scope.styleTitleH1 = {"font-size" : shrinkTitle};
             scope.styleSubTitleH3 = {"font-size" : shrinkSubTitle};
-            scope.styleLogo = {"height": shrinkLogo, "z-index": "8000"};
-            // Stars
-            scope.styleFlowHoriz = {'margin-left': moveX};
-            // Planets
-            scope.styleFlowVert = {'margin-top': moveY};
-            // Left door
-            // var doorLeftFactor = -(Yoff * 1.5) + "%";
-            // var doorRightFactor = Yoff * 1.5 + 50 +"%";
-            // scope.styleDoorLeft = {'margin-left': doorLeftFactor};
-            // Right door
-            // scope.styleDoorRight = {'margin-left': doorRightFactor};
+            
             // Fade out
             var oFactorOut = (100/Yoff);
             scope.styleFadeOut = {'opacity': oFactorOut};

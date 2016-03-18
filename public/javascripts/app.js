@@ -3,25 +3,25 @@ var app = angular.module('klinttiley', ['ngRoute', 'ui.bootstrap', 'ngAnimate'])
     // '$httpProvider',$httpProvider not needed unless using services
    $routeProvider
     .when('/', {
-      templateUrl: 'partials/home.html',
+      templateUrl: 'index.html',
       controller: 'portfolioController'
     })
-    .when('/home', {
-      templateUrl: 'partials/home.html',
-      controller: 'portfolioController'
-    })
-    .when('/portfolio', {
-      templateUrl: 'partials/portfolio.html',
-      controller: 'portfolioController'
-    })
+    // .when('/home', {
+    //   templateUrl: 'partials/home.html',
+    //   controller: 'portfolioController'
+    // })
+    // .when('/portfolio', {
+    //   templateUrl: 'partials/portfolio.html',
+    //   controller: 'portfolioController'
+    // })
     // .when('/about', {
     //     templateUrl: 'partials/about.html',
     //     controller: 'aboutController'
     //   })
-    .when('/contact', {
-      templateUrl: 'partials/contact.html',
-        controller: 'contactController'
-    })
+    // .when('/contact', {
+    //   templateUrl: 'partials/contact.html',
+    //     controller: 'contactController'
+    // })
 
   $locationProvider.html5Mode(true);
 }])

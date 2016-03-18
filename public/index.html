@@ -15,9 +15,136 @@
   <link rel="stylesheet" href="/stylesheets/style.css">
   <title>Klint-The-Human</title>
 </head>
-<body ng-controller='indexController'>
-  
-  <div ng-view></div>
+  <body ng-controller='portfolioController'>
+    
+    
+
+  <div class='header group'>
+    <!-- <img src="/images/logo_bw.png"> -->
+    <div>
+    </div>
+  </div>
+
+  <div class='backer-black'>
+  </div>
+  <div class='backer-movement-window'>
+    <div class='gallery-backer-space1' ng-style="styleFadeOut">
+      
+      <div class='bottom-shade'>
+          </div>  
+      </div>
+    <div class='gallery-backer-space2' ng-style="styleFadeIn">
+    </div>
+    
+  </div>
+  <div class='title-container'>
+    <img  src="/images/logo-color.png">
+    <div class='title'  ng-style="styleTitle">
+        <h1 ng-style='styleTitleH1'>klint tiley</h1>
+      </div>
+      <div class='sub-title'  ng-style="styleSubTitle">
+        <h3 ng-style='styleSubTitleH3'>Web Developer</h3>
+      </div>
+  </div>
+  <div class='phil2'>
+    <h3>I dream...</h3>
+    <p>Sometimes at night I dream about flying planes, wrestling bears, or seeing friends and family who I have not visited for a long time. But mostly... I DREAM ABOUT CODE.</p>
+  </div>
+  <div class='techs-wrapper'>
+    <h3> Technologies </h3>
+    <p>Here are some of the languages, frameworks, libraries, and technologies that reside within my wheelhouse.</p>
+    <img class='tech-logos' src="/images/technology_logos2.png">
+  </div>
+  <a id='portfolio'></a>
+  <div  class='gallery-wrapper'>
+    <h1>Portfolio</h1>
+      <div class='previews-wrapper' ng-show='showPreviewsWrapper' >
+        <div class='preview'>
+          <img src="images/upnote/upnote_landing.png">
+          <div class='text' >
+            <h3>Upnote </h3>
+            <p>Ruby<br>Rails<br>SQLite3<br><br><span class='hover' ng-click="showSlidesWindow(0)">View slides</span></p>
+          </div>
+        </div><div class='preview'>
+          <img src="images/geo_planner/geo-landing.png">
+          <div class='text'>
+            <h3>GEO Planner</h3>
+            <p>Javascript<br>Express<br>MongoDB<br>Angular<br>Google Maps API<br><br><span class='hover' ng-click="showSlidesWindow(1)">View slides</span></p>
+          </div>
+        </div
+        ><div class='preview'>
+          <img src="images/flyers_forum/flyers_landing.png">
+          <div class='text'>
+            <h3>Flyers Forum</h3>
+            <p>Ruby<br>Rails<br>SQLite3<br><br><span class='hover' ng-click="showSlidesWindow(2)">View slides</span></p>
+          </div>
+        </div
+        ><div class='preview'>
+          <img src="images/rocket/rocket_success.png">
+          <div class='text'>
+            <h3>Rocket</h3>
+            <p>Javascript<br>Express<br>MongoDB<br>jQuery<br><br><span class='hover' ng-click="showSlidesWindow(3)">View slides</span></p>
+          </div>
+        </div
+        ><div class='preview'>
+          <img class='vert' src="images/agent/agent_sq2.png" >
+          <div class='text'>
+            <h3>Agent</h3>
+            <p>Xcode<br>Swift<br><br><span class='hover' ng-click="showSlidesWindow(4)">View slides</span></p>
+          </div>
+        </div
+        ><div class='preview'>
+          <img src="images/nyt-top-ten/nyt_sample.jpg">
+          <div class='text'>
+            <h3>NYT List</h3>
+            <p>Javascript<br>Express/NYT API<br><br><span class='hover' ng-click="showSlidesWindow(5)">View slides</span></p>
+          </div>
+        </div>
+      </div>
+      <div class='slides-wrapper' ng-show='showSlidesWrapper'>
+
+        <div class="slider">
+          <img ng-repeat="slide in slides"  class="slide-animation"
+              ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+          <i class="fa fa-angle-left  arrow-left hover"  ng-click="prevSlide()"></i>
+          <i class="fa fa-angle-right arrow-right hover" ng-click="nextSlide()"></i>
+          <div class='dots-container'>
+            <div class='dots' ng-repeat="slide in slides">
+              <i class="fa fa-circle" ng-hide="isCurrentSlideIndex($index)"></i>
+              <i class="fa fa-circle-thin" ng-hide="!isCurrentSlideIndex($index)"></i>
+            </div>
+          </div>  
+        </div>
+
+        <div class='text'>
+          <p ng-repeat="slide in slides" ng-class="{'active':isCurrentSlideIndex($index)}" ng-hide="!isCurrentSlideIndex($index)">{{slide.description}}</p>
+          <h5 class="hover" ng-click='hideSlidesWindow()'>back</h5>
+        </div>
+        
+        
+      </div>
+  </div>
+  <div class='about-intro'>
+    <div class='left'>
+      <div class='container'>
+        <h1>Hello!</h1>
+        <p>Hi everyone. My name is Klint, and I am a coding addict.<br> <br>I'm a Full-Stack developer with experience in HTML, CSS, jQuery, Angular, Express, Node, Ruby, Rails, MongoDB, PostgreSQL, SQLite and more. I enjoy solving coding problems across the stack including UI/UX, server, API, and database related challenges.</p>
+      </div>  
+    </div
+    ><div class='right'>
+    </div>
+  </div>
+  <div class='contact-container'>
+    <h3>Contact</h3>
+    <div class='icons'>
+      <h2><a href="mailto:kctiley@gmail.com"<i class="fa fa-envelope"></i></a></h2>
+      <h2><a href="https://www.linkedin.com/in/klint-tiley-90323029"><i class="fa fa-linkedin"></i></a></h2>
+      <h2><a href="https://twitter.com/kctiley"><i class="fa fa-twitter"></i></a></h2>
+      <h2><a href="https://github.com/kctiley"><i class="fa fa-github"></i></a></h2>
+      
+    </div>
+  </div>
+
 
   <script src="/javascripts/app.js"></script>    
   <script src="/javascripts/controllers.js"></script>
