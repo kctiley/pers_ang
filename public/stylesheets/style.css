@@ -102,7 +102,7 @@ a.link-selected {
 .title h1 {
   /*color: white;*/
   color: #2DC0FA;
-  font-size: 2.5em;
+  font-size: 8em;
   font-weight: 400;
 
 }
@@ -117,7 +117,7 @@ a.link-selected {
 }
 
 .sub-title h3 {
-  font-size: 1em;
+  font-size: 3em;
   /*margin-left: 250px;*/
   /*color: #C7FB1C;*/
   /*color: #2DC0FA;*/
@@ -135,7 +135,8 @@ a.link-selected {
 
 .title-container img {
   padding-top: 15vh;
-  height: 340px;
+  min-height: 360px;
+  height: 33vh
 }
 
 .phil2 {
@@ -144,14 +145,22 @@ a.link-selected {
   background-color: white;
 }
 
+.phil2 h3 {
+  color: #5C5D59;
+}
+
+.phil2 p {
+  color: gray;
+}
+
 .phil2 h3, .techs-wrapper h3 {
   font-weight: 400;
-  font-size: 1.2em;
+  font-size: 3em;
 }
 
 .phil2 p, .techs-wrapper p {
   font-weight: 100;
-  font-size: .88em;
+  font-size: 2.5em;
   line-height: 1.5;
   padding: 10px;
 }
@@ -231,14 +240,6 @@ a.link-selected {
 }
 
 
-.phil2 h3 {
-  color: #5C5D59;
-  /*font-family: 'Pacifico', cursive;*/
-}
-
-.phil2 p {
-  color: gray;
-}
 
 .techs-wrapper {
   /*background:  rgba(15,9,9,0.4);*/
@@ -251,6 +252,7 @@ a.link-selected {
 
 .tech-logos {
   width: 100%;
+  margin-top: 5vh;
 }
 
 .page-title {
@@ -269,7 +271,9 @@ a.link-selected {
 }
 
 .gallery-wrapper h1 {
+  color: white;
   padding-left: 3em;
+  font-size: 3em;
   font-weight: 400;
 }
 
@@ -369,8 +373,8 @@ a.link-selected {
   margin-left: 10%;
   width: 80%;
   /*height: 10%;*/
-  background-color: white;
-  color: black;
+  /*background-color: white;*/
+  color: white;
 
 }
 
@@ -378,18 +382,24 @@ a.link-selected {
   font-size: .8em;
 }
 
-.slides-wrapper h5 { 
-  color: #2DC0FA;
-  padding: 10px;
-  /*padding-left: 10px;
-  padding-right: 10px; */
- }
-
 .slides-wrapper .text p{
+  text-align: center;
   font-size: .64em;
   padding: 10px;
   /*padding-left: 10px;
   padding-right: 10px;*/
+}
+
+
+.controls {
+  text-align: center;
+}
+
+.controls h5{
+ color: white;
+ font-size: 1em;
+ display: inline-block;
+ padding: 5px;
 }
 
 #slides-buttons {
@@ -487,9 +497,11 @@ a.link-selected {
 .about-intro h1 {
   font-family: 'Pacifico', cursive;
   margin-top: 4vh;
+  font-size: 3em;
 }
 
 .about-intro p {
+font-size: 2em;
   font-weight: 100;
 
 }
@@ -569,14 +581,22 @@ a.link-selected {
 }
 
 .contact-container h3{
-  font-size: 2em;
+  font-size: 4em;
   font-weight: 400;
   padding-top: 20vh;
   margin-bottom: 10vh;
   color: #2DC0FA;
 }
 
-@media screen and (max-width:800px) and (min-width:540px)
+.contact-container h2{
+  font-size: 4em;
+  padding: 1em;
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1)
   {
 
     .header h2 {
@@ -766,7 +786,7 @@ a.link-selected {
 
 }
 
-@media screen and (min-width:800px)
+@media screen and (min-device-width: 1024px)
   {
     /*.header {*/
       /*height: 3em;*/

@@ -106,8 +106,6 @@
         <div class="slider">
           <img ng-repeat="slide in slides"  class="slide-animation"
               ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
-          <i class="fa fa-angle-left  arrow-left hover"  ng-click="prevSlide()"></i>
-          <i class="fa fa-angle-right arrow-right hover" ng-click="nextSlide()"></i>
           <div class='dots-container'>
             <div class='dots' ng-repeat="slide in slides">
               <i class="fa fa-circle" ng-hide="isCurrentSlideIndex($index)"></i>
@@ -117,11 +115,15 @@
         </div>
 
         <div class='text'>
+          <div class='controls'>
+            <h5 class="hover" ng-click="playSlides()"><i class="fa fa-play"></i></h5>
+            <h5 class="hover" ng-click="pauseSlides()"><i class="fa fa-pause"></i></h5>
+            <h5 class="hover" ng-click="prevSlide()"><i class="fa fa-step-backward"></i></h5>
+            <h5 class="hover" ng-click="nextSlide()"><i class="fa fa-step-forward"></i></h5>
+            <h5 class="hover" ng-click='hideSlidesWindow()'><i class="fa fa-times"></i></h5>
+          </div>
           <p ng-repeat="slide in slides" ng-class="{'active':isCurrentSlideIndex($index)}" ng-hide="!isCurrentSlideIndex($index)">{{slide.description}}</p>
-          <h5 class="hover" ng-click='hideSlidesWindow()'>back</h5>
         </div>
-        
-        
       </div>
   </div>
   <div class='about-intro'>

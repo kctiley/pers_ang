@@ -18,7 +18,8 @@
 //   });
 // }]);
 
-app.controller('portfolioController', ['$scope', '$location', function($scope, $location) {
+app.controller('portfolioController', ['$scope', '$location', '$interval', function($scope, $location, $interval) {
+  
   
 
   $scope.showPreviewsWrapper = true;
@@ -29,6 +30,36 @@ app.controller('portfolioController', ['$scope', '$location', function($scope, $
     $scope.slideGroupIndex = slideGroupIndex;
     $scope.slides = $scope.slideGroups[$scope.slideGroupIndex];
   }
+
+  // store the interval promise in this variable
+    var promise;
+  
+    // starts the interval
+    $scope.playSlides = function() {
+      // stops any running interval to avoid two intervals running at the same time
+      $scope.pauseSlides(); 
+      
+      // store the interval promise
+      promise = $interval(function(){ $scope.nextSlide();}, 3000);
+    };
+  
+    // stops the interval
+    $scope.pauseSlides = function() {
+      $interval.cancel(promise);
+    };
+  
+    // stops the interval when the scope is destroyed,
+    // this usually happens when a route is changed and 
+    // the ItemsController $scope gets destroyed. The
+    // destruction of the ItemsController scope does not
+    // guarantee the stopping of any intervals, you must
+    // be responsible of stopping it when the scope is
+    // is destroyed.
+    $scope.$on('$destroy', function() {
+      $scope.stop();
+    });
+
+
 
   $scope.hideSlidesWindow = function(){
     $scope.showSlidesWrapper = false;
@@ -88,6 +119,11 @@ app.controller('portfolioController', ['$scope', '$location', function($scope, $
       $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
   };
 
+
+  
+
+
+
   // Initial slide show index
   // $scope.currentSlideIndex = 0;
 
@@ -116,6 +152,7 @@ app.controller('portfolioController', ['$scope', '$location', function($scope, $
 }]);
 
 app.animation('.slide-animation', function () {
+    console.log("in slide animation")
         return {
             beforeAddClass: function (element, className, done) {
                 var scope = element.scope();
@@ -161,6 +198,7 @@ app.directive("scroll", function ($window) {
             
             var Yoff = this.pageYOffset;
             console.log(Yoff);
+            console.log($(document).height());
             // var moveX = Yoff * .01 - 66 + "%";
             // var moveTitle = 57 + (Yoff * .25) + "vw";
             var moveTitle2 = "-=" + (Yoff * 1.05) + "vw";
@@ -171,11 +209,12 @@ app.directive("scroll", function ($window) {
             var moveSubTitle2 = "-=" + (Yoff * .55) + "vw";
             // var moveY = -(Yoff * .02) + "%";
             //title
-            scope.styleTitle = {'margin-top': moveTitle2, "white-space": "nowrap" };
-            scope.styleSubTitle = {'margin-top': moveSubTitle2, "white-space": "nowrap" };
-            scope.styleTitleH1 = {"font-size" : shrinkTitle};
-            scope.styleSubTitleH3 = {"font-size" : shrinkSubTitle};
-            
+            // scope.styleTitle = {'margin-top': moveTitle2, "white-space": "nowrap" };
+            // scope.styleSubTitle = {'margin-top': moveSubTitle2, "white-space": "nowrap" };
+            if(Yoff < 320) {
+              scope.styleTitleH1 = {"font-size" : shrinkTitle};
+              scope.styleSubTitleH3 = {"font-size" : shrinkSubTitle};
+            }
             // Fade out
             var oFactorOut = (100/Yoff);
             scope.styleFadeOut = {'opacity': oFactorOut};
