@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app='klinttiley' scroll>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <base href="/">
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
@@ -59,73 +60,78 @@
   <a id='portfolio'></a>
   <div  class='gallery-wrapper'>
     <h1>Portfolio</h1>
-      <div class='previews-wrapper' ng-show='showPreviewsWrapper' >
-        <div class='preview'>
-          <img src="images/upnote/upnote_landing.png">
-          <div class='text' >
-            <h3>Upnote </h3>
-            <p>Ruby<br>Rails<br>SQLite3<br><br><span class='hover' ng-click="showSlidesWindow(0)">View slides</span></p>
-          </div>
-        </div><div class='preview'>
-          <img src="images/geo_planner/geo-landing.png">
-          <div class='text'>
-            <h3>GEO Planner</h3>
-            <p>Javascript<br>Express<br>MongoDB<br>Angular<br>Google Maps API<br><br><span class='hover' ng-click="showSlidesWindow(1)">View slides</span></p>
-          </div>
-        </div
-        ><div class='preview'>
-          <img src="images/flyers_forum/flyers_landing.png">
-          <div class='text'>
-            <h3>Flyers Forum</h3>
-            <p>Ruby<br>Rails<br>SQLite3<br><br><span class='hover' ng-click="showSlidesWindow(2)">View slides</span></p>
-          </div>
-        </div
-        ><div class='preview'>
-          <img src="images/rocket/rocket_success.png">
-          <div class='text'>
-            <h3>Rocket</h3>
-            <p>Javascript<br>Express<br>MongoDB<br>jQuery<br><br><span class='hover' ng-click="showSlidesWindow(3)">View slides</span></p>
-          </div>
-        </div
-        ><div class='preview'>
-          <img class='vert' src="images/agent/agent_sq2.png" >
-          <div class='text'>
-            <h3>Agent</h3>
-            <p>Xcode<br>Swift<br><br><span class='hover' ng-click="showSlidesWindow(4)">View slides</span></p>
-          </div>
-        </div
-        ><div class='preview'>
-          <img src="images/nyt-top-ten/nyt_sample.jpg">
-          <div class='text'>
-            <h3>NYT List</h3>
-            <p>Javascript<br>Express/NYT API<br><br><span class='hover' ng-click="showSlidesWindow(5)">View slides</span></p>
-          </div>
+    <div class='previews-wrapper' ng-show='showPreviewsWrapper' >
+      <div class='preview'>
+        <img src="images/upnote/upnote_landing.png">
+        <div class='text' >
+          <h3>Upnote </h3>
+          <p>Ruby<br>Rails<br>SQLite3<br><br><span class='hover' ng-click="showSlidesWindow(0)">View slides</span></p>
         </div>
-      </div>
-      <div class='slides-wrapper' ng-show='showSlidesWrapper'>
-
-        <div class="slider">
-          <img ng-repeat="slide in slides"  class="slide-animation"
-              ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
-          <div class='dots-container'>
-            <div class='dots' ng-repeat="slide in slides">
-              <i class="fa fa-circle" ng-hide="isCurrentSlideIndex($index)"></i>
-              <i class="fa fa-circle-thin" ng-hide="!isCurrentSlideIndex($index)"></i>
-            </div>
-          </div>  
-        </div>
-
+      </div><div class='preview'>
+        <img src="images/geo_planner/geo-landing.png">
         <div class='text'>
-          <div class='controls'>
-            <h5 class="hover" ng-click="playSlides()"><i class="fa fa-play"></i></h5>
-            <h5 class="hover" ng-click="pauseSlides()"><i class="fa fa-pause"></i></h5>
-            <h5 class="hover" ng-click="prevSlide()"><i class="fa fa-step-backward"></i></h5>
-            <h5 class="hover" ng-click="nextSlide()"><i class="fa fa-step-forward"></i></h5>
-            <h5 class="hover" ng-click='hideSlidesWindow()'><i class="fa fa-times"></i></h5>
-          </div>
-          <p ng-repeat="slide in slides" ng-class="{'active':isCurrentSlideIndex($index)}" ng-hide="!isCurrentSlideIndex($index)">{{slide.description}}</p>
+          <h3>GEO Planner</h3>
+          <p>Javascript<br>Express<br>MongoDB<br>Angular<br>Google Maps API<br><br><span class='hover' ng-click="showSlidesWindow(1)">View slides</span></p>
+        </div>
+      </div
+      ><div class='preview'>
+        <img src="images/flyers_forum/flyers_landing.png">
+        <div class='text'>
+          <h3>Flyers Forum</h3>
+          <p>Ruby<br>Rails<br>SQLite3<br><br><span class='hover' ng-click="showSlidesWindow(2)">View slides</span></p>
+        </div>
+      </div
+      ><div class='preview'>
+        <img src="images/rocket/rocket_success.png">
+        <div class='text'>
+          <h3>Rocket</h3>
+          <p>Javascript<br>Express<br>MongoDB<br>jQuery<br><br><span class='hover' ng-click="showSlidesWindow(3)">View slides</span></p>
+        </div>
+      </div
+      ><div class='preview'>
+        <img class='vert' src="images/agent/agent_sq2.png" >
+        <div class='text'>
+          <h3>Agent</h3>
+          <p>Xcode<br>Swift<br><br><span class='hover' ng-click="showSlidesWindow(4)">View slides</span></p>
+        </div>
+      </div
+      ><div class='preview'>
+        <img src="images/nyt-top-ten/nyt_sample.jpg">
+        <div class='text'>
+          <h3>NYT List</h3>
+          <p>Javascript<br>Express/NYT API<br><br><span class='hover' ng-click="showSlidesWindow(5)">View slides</span></p>
+        </div>
+      </div
+      ><div class='preview'>
+        <img src="images/tic/tic-tac.png">
+        <div class='text'>
+          <h3>Tic-Tac-Toe</h3>
+          <p>Javascript<br>Express<br>Computer AI<br><a href="https://tic-tac-kct.herokuapp.com/">Play now! </a></p>
         </div>
       </div>
+    </div>
+    <div class='slides-wrapper' ng-show='showSlidesWrapper'>
+      <div class="slider">
+        <img ng-repeat="slide in slides"  class="slide-animation"
+            ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+        <div class='dots-container'>
+          <div class='dots' ng-repeat="slide in slides">
+            <i class="fa fa-circle" ng-hide="isCurrentSlideIndex($index)"></i>
+            <i class="fa fa-circle-thin" ng-hide="!isCurrentSlideIndex($index)"></i>
+          </div>
+        </div>  
+      </div>
+      <div class='text'>
+        <div class='controls'>
+          <h5 class="hover" ng-click="playSlides()"><i class="fa fa-play"></i></h5>
+          <h5 class="hover" ng-click="pauseSlides()"><i class="fa fa-pause"></i></h5>
+          <h5 class="hover" ng-click="prevSlide()"><i class="fa fa-step-backward"></i></h5>
+          <h5 class="hover" ng-click="nextSlide()"><i class="fa fa-step-forward"></i></h5>
+          <h5 class="hover" ng-click='hideSlidesWindow()'><i class="fa fa-times"></i></h5>
+        </div>
+        <p ng-repeat="slide in slides" ng-class="{'active':isCurrentSlideIndex($index)}" ng-hide="!isCurrentSlideIndex($index)">{{slide.description}}</p>
+      </div>
+    </div>
   </div>
   <div class='about-intro'>
     <div class='left'>

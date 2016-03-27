@@ -212,6 +212,7 @@ app.directive("scroll", function ($window) {
             // scope.styleTitle = {'margin-top': moveTitle2, "white-space": "nowrap" };
             // scope.styleSubTitle = {'margin-top': moveSubTitle2, "white-space": "nowrap" };
             if(Yoff < 320) {
+              console.log(shrinkTitle)
               scope.styleTitleH1 = {"font-size" : shrinkTitle};
               scope.styleSubTitleH3 = {"font-size" : shrinkSubTitle};
             }
