@@ -1,27 +1,25 @@
+app.controller('indexController', ['$scope', '$route', '$rootScope', function($scope, $route,$rootScope) {
+  // Use path to change highlight of page link
+  $scope.linkCollection = ["home", "contact","portfolio","about" ];
+  $scope.linkStyle;
+  $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {
+      var path = current.$$route.originalPath ;
+      $scope.linkCollection.forEach(function(path_name){
+        if(path == "/" +  path_name){
+           var linkId = angular.element( document.querySelector( "#" + path_name + "-link" ) );
+           linkId.addClass('link-selected')
+        }
+        else{
+          var linkId = angular.element( document.querySelector( "#" + path_name + "-link" ) );
+          linkId.removeClass('link-selected')
+        }
+      })
+  });
+}]);
 
-// app.controller('indexController', ['$scope', '$route', '$rootScope', function($scope, $route,$rootScope) {
-//   // $scope.linkCollection = ["home", "contact","portfolio","about" ];
-//   $scope.linkStyle;
-//   // Updates link on route change
-//   $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {
-//       var path = current.$$route.originalPath ;
-//       $scope.linkCollection.forEach(function(path_name){
-//         if(path == "/" +  path_name){
-//            var linkId = angular.element( document.querySelector( "#" + path_name + "-link" ) );
-//            linkId.addClass('link-selected')
-//         }
-//         else{
-//           var linkId = angular.element( document.querySelector( "#" + path_name + "-link" ) );
-//           linkId.removeClass('link-selected')
-//         }
-//       })
-//   });
-// }]);
 
-app.controller('portfolioController', ['$scope', '$location', '$interval', function($scope, $location, $interval) {
+app.controller('homeController', ['$scope', '$location', '$interval', function($scope, $location, $interval) {
   
-  
-
   $scope.showPreviewsWrapper = true;
   $scope.showSlidesWrapper = false;
   $scope.showSlidesWindow = function(slideGroupIndex){
@@ -30,35 +28,6 @@ app.controller('portfolioController', ['$scope', '$location', '$interval', funct
     $scope.slideGroupIndex = slideGroupIndex;
     $scope.slides = $scope.slideGroups[$scope.slideGroupIndex];
   }
-
-  // store the interval promise in this variable
-    var promise;
-  
-    // starts the interval
-    $scope.playSlides = function() {
-      // stops any running interval to avoid two intervals running at the same time
-      $scope.pauseSlides(); 
-      
-      // store the interval promise
-      promise = $interval(function(){ $scope.nextSlide();}, 3000);
-    };
-  
-    // stops the interval
-    $scope.pauseSlides = function() {
-      $interval.cancel(promise);
-    };
-  
-    // stops the interval when the scope is destroyed,
-    // this usually happens when a route is changed and 
-    // the ItemsController $scope gets destroyed. The
-    // destruction of the ItemsController scope does not
-    // guarantee the stopping of any intervals, you must
-    // be responsible of stopping it when the scope is
-    // is destroyed.
-    $scope.$on('$destroy', function() {
-      $scope.stop();
-    });
-
 
 
   $scope.hideSlidesWindow = function(){
@@ -98,6 +67,35 @@ app.controller('portfolioController', ['$scope', '$location', '$interval', funct
     ]
   ]
   
+  // store the interval promise in this variable
+    var promise;
+  
+    // starts the interval
+    $scope.playSlides = function() {
+      // stops any running interval to avoid two intervals running at the same time
+      $scope.pauseSlides(); 
+      
+      // store the interval promise
+      promise = $interval(function(){ $scope.nextSlide();}, 3000);
+    };
+  
+    // stops the interval
+    $scope.pauseSlides = function() {
+      $interval.cancel(promise);
+    };
+  
+    // stops the interval when the scope is destroyed,
+    // this usually happens when a route is changed and 
+    // the ItemsController $scope gets destroyed. The
+    // destruction of the ItemsController scope does not
+    // guarantee the stopping of any intervals, you must
+    // be responsible of stopping it when the scope is
+    // is destroyed.
+    $scope.$on('$destroy', function() {
+      $scope.stop();
+    });
+
+
 
   $scope.currentIndex = 0;
   $scope.setCurrentSlideIndex = function (index) {
@@ -119,112 +117,13 @@ app.controller('portfolioController', ['$scope', '$location', '$interval', funct
       $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
   };
 
+  $scope.openDoors = function(){
+    console.log("test")
+    $scope.styleLeft = {"margin-left": -40 + "%", "-webkit-transition": "width 2s; /* Safari */",
+    "transition": "width 2s"};
+  }
 
-  
-
-
-
-  // Initial slide show index
-  // $scope.currentSlideIndex = 0;
-
-  // $scope.rotateCarousel = function(buttonAction){
-  //   var slideGroup = $scope.arrayOfSlides[$scope.slideGroupIndex];
-  //   var frameWidth = 100/slideGroup.length;
-  //   // Pause carousel
-  //   if(buttonAction == 'pause'){
-  //       clearInterval($scope.play);
-  //     }
-  //   // Play carousel
-  //   $scope.play = setInterval(go, 3000);
-  //   function go(){
-  //     if(buttonAction == 'play'){
-  //       $scope.currentSlideIndex += 1;
-  //         if($scope.currentSlideIndex == slideGroup.length){
-  //           $scope.currentSlideIndex = 0;
-  //         }
-  //         var margin = "-" + $scope.currentSlideIndex * 100 + "%";
-  //         $scope.carouselStyle = {"margin-left" : margin};
-  //         $scope.$apply();
-  //     }
-  //   } 
-  // }
 
 }]);
 
-app.animation('.slide-animation', function () {
-    console.log("in slide animation")
-        return {
-            beforeAddClass: function (element, className, done) {
-                var scope = element.scope();
 
-                if (className == 'ng-hide') {
-                    var finishPoint = element.parent().width();
-                    if(scope.direction !== 'right') {
-                        finishPoint = -finishPoint;
-                    }
-                    TweenMax.to(element, 0.5, {left: finishPoint, onComplete: done });
-                }
-                else {
-                    done();
-                }
-            },
-            removeClass: function (element, className, done) {
-                var scope = element.scope();
-
-                if (className == 'ng-hide') {
-                    element.removeClass('ng-hide');
-
-                    var startPoint = element.parent().width();
-                    if(scope.direction === 'right') {
-                        startPoint = -startPoint;
-                    }
-
-                    TweenMax.fromTo(element, 0.5, { left: startPoint }, {left: 0, onComplete: done });
-                }
-                else {
-                    done();
-                }
-            }
-        };
-    });
-
-app.directive("scroll", function ($window) {
-
-    return function(scope, element, attrs) {
-        scope.currentScroll = 0;
-        scope.prevScroll = 0;
-      
-        angular.element($window).bind("scroll", function() {
-            
-            var Yoff = this.pageYOffset;
-            console.log(Yoff);
-            console.log($(document).height());
-            // var moveX = Yoff * .01 - 66 + "%";
-            // var moveTitle = 57 + (Yoff * .25) + "vw";
-            var moveTitle2 = "-=" + (Yoff * 1.05) + "vw";
-            var shrinkTitle = "-=" + (Yoff * .15) + "em";
-            var shrinkSubTitle = "-=" + (Yoff * .05) + "em";
-            // var shrinkLogo = "-=" + (Yoff * 1.55) + "vh";
-            // var moveSubTitle = 17 - (Yoff * .25) + "vw";
-            var moveSubTitle2 = "-=" + (Yoff * .55) + "vw";
-            // var moveY = -(Yoff * .02) + "%";
-            //title
-            // scope.styleTitle = {'margin-top': moveTitle2, "white-space": "nowrap" };
-            // scope.styleSubTitle = {'margin-top': moveSubTitle2, "white-space": "nowrap" };
-            if(Yoff < 320) {
-              console.log(shrinkTitle)
-              scope.styleTitleH1 = {"font-size" : shrinkTitle};
-              scope.styleSubTitleH3 = {"font-size" : shrinkSubTitle};
-            }
-            // Fade out
-            var oFactorOut = (100/Yoff);
-            scope.styleFadeOut = {'opacity': oFactorOut};
-            // Fade in
-            var oFactorIn = (Yoff/1200);
-            scope.styleFadeIn = {'opacity': oFactorIn};
-
-            scope.$apply();
-            });
-          
-        };
-});
