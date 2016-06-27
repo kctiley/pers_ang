@@ -106,13 +106,14 @@ body {
 }
 
 .fc-home .content p{
+  margin-top: 20px;
   font-weight: 300;
   font-size: 22px;
   opacity: .75;
 }
 
 .self-promo-container {
-  padding: 2em;
+  padding: 3em;
 }
 
 .self-promo-container ul {
@@ -125,14 +126,14 @@ body {
   text-align: center;
 }
 .self-promo-container ul li img {
-  height: 100px;
+  height: 70px;
   display: inline-block;
 }
 
 .self-promo-container ul li h3 {
   display: inline-block;
   vertical-align: top;
-  padding: 20px 20px 0 0;
+  padding: 20px 30px 0 0;
   text-decoration: underline;
   font-weight: 400;
 
