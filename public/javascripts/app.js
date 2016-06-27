@@ -7,6 +7,10 @@ var app = angular.module('klinttiley', ['ngRoute', 'ui.bootstrap', 'ngAnimate', 
       templateUrl: 'partials/home.html',
       controller: 'homeController'
     })
+    .when('/fullcontact', {
+      templateUrl: 'partials/fc_index.html',
+      controller: 'homeController'
+    })
 
   $locationProvider.html5Mode(true);
 }])

@@ -1,0 +1,139 @@
+
+body {
+  margin: 0;
+}
+
+.logo-container {
+  width: 33%
+}
+.main-logo {
+  transition: all 0.4s ease;
+  height: 100px;
+  width: 100px;
+  background-color: #c53927;
+  color: white;
+  position: absolute;
+  overflow: hidden;
+}
+
+.main-logo:hover {
+  width: 240px;
+  transform: scale(1.1); 
+}
+
+.main-logo img{
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 12px;
+  height: 80%;
+}
+
+.main-logo h2 {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 100px;
+  font-size: 16px;
+  white-space: nowrap;
+
+}
+
+.main-logo h2 span{
+  font-weight: 100;
+}
+
+.main-header {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  padding-bottom: 9px;
+  margin: 0;
+}
+
+.main-nav {
+  position: absolute;
+  margin-left: 65%;
+}
+
+.main-nav ul {
+  text-align: right;
+}
+
+.main-nav ul li {
+  text-transform: uppercase;
+  list-style-type: none;
+  display: inline-block;
+  color: white;
+  padding: 1em;
+  font-weight: 300;
+  font-size: 1em;
+  opacity: .75;
+}
+
+.main-nav ul li .menu-button {
+  font-size: 2em;
+}
+
+.menu-button i {
+  border: .075em solid white;
+  padding: .25em .5em .25em .5em;
+  border-radius: 4px;
+}
+
+.wrapper {
+  width: 1140px;
+  max-width: 90%;
+  margin: 0 auto; }
+
+.fc-home {
+  background: #415468 url('../images/fc_assets/dbx_blue-01.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  font-family: "Avenir W02",sans-serif;
+}
+
+.fc-home .content {
+  padding: 8em;
+  text-align: center;
+  color: white;
+  
+}
+
+.fc-home .content h1{
+  font-weight: 400;
+  font-size: 34px;
+  letter-spacing: 2px;
+}
+
+.fc-home .content p{
+  font-weight: 300;
+  font-size: 22px;
+  opacity: .75;
+}
+
+.self-promo-container {
+  padding: 2em;
+}
+
+.self-promo-container ul {
+  padding: 0;
+}
+
+.self-promo-container ul li {
+  list-style-type: none;
+  display: inline-block;
+  text-align: center;
+}
+.self-promo-container ul li img {
+  height: 100px;
+  display: inline-block;
+}
+
+.self-promo-container ul li h3 {
+  display: inline-block;
+  vertical-align: top;
+  padding: 20px 20px 0 0;
+  text-decoration: underline;
+  font-weight: 400;
+
+}
