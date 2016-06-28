@@ -1,20 +1,20 @@
 app.controller('indexController', ['$scope', '$route', '$rootScope', function($scope, $route,$rootScope) {
   // Use path to change highlight of page link
-  $scope.linkCollection = ["home", "contact","portfolio","about" ];
-  $scope.linkStyle;
-  $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {
-      var path = current.$$route.originalPath ;
-      $scope.linkCollection.forEach(function(path_name){
-        if(path == "/" +  path_name){
-           var linkId = angular.element( document.querySelector( "#" + path_name + "-link" ) );
-           linkId.addClass('link-selected')
-        }
-        else{
-          var linkId = angular.element( document.querySelector( "#" + path_name + "-link" ) );
-          linkId.removeClass('link-selected')
-        }
-      })
-  });
+  // $scope.linkCollection = ["home", "contact","portfolio","about" ];
+  // $scope.linkStyle;
+  // $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {
+  //     var path = current.$$route.originalPath ;
+  //     $scope.linkCollection.forEach(function(path_name){
+  //       if(path == "/" +  path_name){
+  //          var linkId = angular.element( document.querySelector( "#" + path_name + "-link" ) );
+  //          linkId.addClass('link-selected')
+  //       }
+  //       else{
+  //         var linkId = angular.element( document.querySelector( "#" + path_name + "-link" ) );
+  //         linkId.removeClass('link-selected')
+  //       }
+  //     })
+  // });
 }]);
 
 

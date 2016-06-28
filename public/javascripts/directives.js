@@ -43,27 +43,27 @@ app.directive("scroll", function ($window) {
       
         angular.element($window).bind("scroll", function() {
 
-            console.log(Yoff)
+            // console.log(Yoff)
             var Yoff = this.pageYOffset;
-            console.log(Yoff);
+            // console.log(Yoff);
             var moveX = Yoff * .01 - 66 + "%";
-            var moveTitle = 57 + (Yoff * .25) + "vw";
-            var moveTitle2 = "-=" + (Yoff * 1.05) + "vw";
+            // var moveTitle = 57 + (Yoff * .25) + "vw";
+            // var moveTitle2 = "-=" + (Yoff * 1.05) + "vw";
             var shrinkTitle = "-=" + (Yoff * .15) + "em";
             var shrinkSubTitle = "-=" + (Yoff * .05) + "em";
-            var shrinkLogo = "-=" + (Yoff * 1.55) + "vh";
-            var moveSubTitle = 17 - (Yoff * .25) + "vw";
-            var moveSubTitle2 = "-=" + (Yoff * .55) + "vw";
-            var moveY = -(Yoff * .02) + "%";
+            // var shrinkLogo = "-=" + (Yoff * 1.55) + "vh";
+            // var moveSubTitle = 17 - (Yoff * .25) + "vw";
+            // var moveSubTitle2 = "-=" + (Yoff * .55) + "vw";
+            // var moveY = -(Yoff * .02) + "%";
             //title
             if(Yoff < 320) {
               scope.styleTitleH1 = {"font-size" : shrinkTitle};
               scope.styleSubTitleH3 = {"font-size" : shrinkSubTitle};
             }
 
-            scope.styleFlowHoriz = {'margin-left': moveX};
+            // scope.styleFlowHoriz = {'margin-left': moveX};
             // Planets
-            scope.styleFlowVert = {'margin-top': moveY};
+            // scope.styleFlowVert = {'margin-top': moveY};
 
             var oFactorOut = (100/Yoff);
             scope.styleFadeOut = {'opacity': oFactorOut};
@@ -72,7 +72,7 @@ app.directive("scroll", function ($window) {
             scope.styleFadeIn = {'opacity': oFactorIn};
 
             scope.$apply();
-            });
+        });
           
-        };
+    };
 });

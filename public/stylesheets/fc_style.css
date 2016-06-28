@@ -69,6 +69,14 @@ body {
   opacity: .75;
 }
 
+.main-nav ul li a{
+  text-decoration: none ;
+}
+
+.main-nav ul li:hover {
+  opacity: 1;
+}
+
 .main-nav ul li .menu-button {
   font-size: 2em;
 }
@@ -138,3 +146,27 @@ body {
   font-weight: 400;
 
 }
+
+.self-promo-container a:hover{
+  color: #3AACF1;
+}
+
+/* unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+}
+
+/* mouse over link */
+a:hover {
+    opacity: 1.0;
+}
+
+/* selected link */
+/*a:active {
+    color: yellow;
+}*/
