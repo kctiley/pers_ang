@@ -76,7 +76,7 @@ app.controller('homeController', ['$scope', '$location', '$interval', function($
       $scope.pauseSlides(); 
       
       // store the interval promise
-      promise = $interval(function(){ $scope.nextSlide();}, 3000);
+      promise = $interval(function(){ $scope.nextSlide();}, 2000);
     };
   
     // stops the interval
@@ -92,7 +92,7 @@ app.controller('homeController', ['$scope', '$location', '$interval', function($
     // be responsible of stopping it when the scope is
     // is destroyed.
     $scope.$on('$destroy', function() {
-      $scope.$stop();
+      // $scope.stop();
     });
 
 
