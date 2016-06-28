@@ -92,7 +92,7 @@ app.controller('homeController', ['$scope', '$location', '$interval', function($
     // be responsible of stopping it when the scope is
     // is destroyed.
     $scope.$on('$destroy', function() {
-      $scope.stop();
+      $scope.$stop();
     });
 
 
