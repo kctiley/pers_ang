@@ -15,10 +15,12 @@ var app = angular.module('klinttiley', ['ngRoute', 'ui.bootstrap', 'ngAnimate', 
   $locationProvider.html5Mode(true);
 }])
 
-app.run(function($rootScope, $location, $anchorScroll) {
-  //when the route is changed scroll to the proper element.
-  $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
-    console.log(newRoute.oldRoute)
-    if($location.hash()) $anchorScroll();  
-  });
-});
+// app.run(function($rootScope, $location, $anchorScroll, $routeParams) {
+//   $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+//     console.log("in routeChangeSuccess")
+//     console.log("$location", $location)
+//     $location.hash($routeParams.scrollTo);
+//     // $anchorScroll();  
+//     // setTimeout($anchorScroll(), 3000) 
+//   });
+// });
