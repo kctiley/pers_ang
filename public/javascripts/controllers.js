@@ -8,6 +8,7 @@ app.controller('fcController',['$scope', '$location', '$route', '$rootScope', fu
 
 app.controller('homeController', ['$scope', '$interval', function($scope,  $interval) {
 
+  
   $scope.showPreviewsWrapper = true;
   $scope.showSlidesWrapper = false;
   $scope.showSlidesWindow = function(slideGroupIndex){
@@ -72,13 +73,6 @@ app.controller('homeController', ['$scope', '$interval', function($scope,  $inte
       $interval.cancel(promise);
     };
   
-    // stops the interval when the scope is destroyed,
-    // this usually happens when a route is changed and 
-    // the ItemsController $scope gets destroyed. The
-    // destruction of the ItemsController scope does not
-    // guarantee the stopping of any intervals, you must
-    // be responsible of stopping it when the scope is
-    // is destroyed.
     $scope.$on('$destroy', function() {
       // $scope.stop();
     });
@@ -104,12 +98,6 @@ app.controller('homeController', ['$scope', '$interval', function($scope,  $inte
       $scope.direction = 'left';
       $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
   };
-
-  $scope.openDoors = function(){
-    console.log("test")
-    $scope.styleLeft = {"margin-left": -40 + "%", "-webkit-transition": "width 2s; /* Safari */",
-    "transition": "width 2s"};
-  }
 
 
 }]);

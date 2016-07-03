@@ -170,3 +170,22 @@ a:hover {
 /*a:active {
     color: yellow;
 }*/
+
+.resume-pdf {
+  width: 80vw;
+  height: 110vw;
+}
+
+.card-pdf {
+  width: 40vw;
+  height: 25vw;
+}
+
+.content-title {
+  padding: 1em;
+}
+
+.content-title a {
+  font-size: .5em;
+  font-weight: 100;
+}

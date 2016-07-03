@@ -37,14 +37,17 @@ app.animation('.slide-animation', function () {
 
 app.directive("scroll", function ($window) {
 
+
     return function(scope, element, attrs) {
         scope.currentScroll = 0;
         scope.prevScroll = 0;
       
         angular.element($window).bind("scroll", function() {
 
+
             // console.log(Yoff)
             var Yoff = this.pageYOffset;
+            console.log('scrolling', Yoff)
             // console.log(Yoff);
             var moveX = Yoff * .01 - 66 + "%";
             // var moveTitle = 57 + (Yoff * .25) + "vw";

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app='klinttiley' scroll>
+<html ng-app='klintTheHuman' scroll>
 <head>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +9,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-animate.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-touch.js"></script>
@@ -18,9 +19,12 @@
   <link rel="stylesheet" href="/stylesheets/fc_style.css">
   <title>Klint-The-Human</title>
 </head>
-<body ng-controller='indexController'>
+<body>
+  <a ui-sref="fc.home" style='color: blue'>fc home</a>
+  <br>
+  <a ui-sref="/" style='color: blue'>main site</a>
   
-  <div ng-view ></div>
+  <div ui-view></div>
 
   <script src="/javascripts/app.js"></script>    
   <script src="/javascripts/controllers.js"></script>

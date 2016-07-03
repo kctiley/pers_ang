@@ -1,17 +1,31 @@
 
-var app = angular.module('klinttiley', ['ngRoute', 'ui.bootstrap', 'ngAnimate', 'ngTouch'])
-  .config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider){
-    // '$httpProvider',$httpProvider not needed unless using services
-   $routeProvider
-    .when('/', {
-      templateUrl: 'partials/home.html',
-      controller: 'homeController'
-    })
-    .when('/fullcontact', {
-      templateUrl: 'partials/fc_index.html',
-      controller: 'homeController'
-    })
+var app = angular.module('klintTheHuman', ['ui.router', 'ngRoute', 'ui.bootstrap', 'ngAnimate', 'ngTouch'])
+  .config( function($stateProvider, $urlRouterProvider, $locationProvider){
 
-  $locationProvider.html5Mode(true);
-}])
+    $urlRouterProvider.otherwise("/");
+
+    $stateProvider
+      .state('fc', {
+        url: "/fc",
+        templateUrl: "partials/fc.html"
+      })
+      .state('fc.home', {
+        url: "/fc.home",
+        templateUrl: "partials/fc.home.html",
+      }).state('fc.resume', {
+        url: "/fc.resume",
+        templateUrl: "partials/fc.resume.html",
+      }).state('fc.card', {
+        url: "/fc.card",
+        templateUrl: "partials/fc.card.html",
+      })
+      .state('/', {
+        url: "/",
+        templateUrl: "partials/home.html",
+        controller: "homeController"
+      })
+
+
+
+})
 
