@@ -93,61 +93,73 @@ body {
   margin: 0 auto; }
 
 .fc-home {
-  background: #415468 url('../images/fc_assets/dbx_blue-01.jpg');
+  box-sizing: border-box;
+
+  background:  url('../images/fc_assets/dbx_blue-01.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 700px;
   font-family: "Avenir W02",sans-serif;
+  line-height: 1.5;
 }
 
-.fc-home .content {
-  padding: 8em;
+.fc-home h2 {
+  font-size: 2rem;
+  margin-bottom: .5em;
+  font-weight: 500;
+}
+
+.copy p {
+    margin-bottom: 1.5em;
+    font-size: 1.125rem;
+    color: #808285;
+}
+
+.fc-home .landing {
+  margin-top: 7vh;
+  padding: 6em;
   text-align: center;
   color: white;
-  
 }
 
-.fc-home .content h1{
+.fc-home .landing h1{
   font-weight: 400;
-  font-size: 34px;
+  font-size: 36px;
   letter-spacing: 2px;
 }
 
-.fc-home .content p{
+.fc-home .landing p{
   margin-top: 20px;
   font-weight: 300;
   font-size: 22px;
   opacity: .75;
 }
 
-.self-promo-container {
+.landing ul {
   padding: 3em;
 }
 
-.self-promo-container ul {
-  padding: 0;
-}
-
-.self-promo-container ul li {
+.landing ul li {
   list-style-type: none;
   display: inline-block;
   text-align: center;
 }
-.self-promo-container ul li img {
+.landing ul li img {
   height: 70px;
   display: inline-block;
 }
 
-.self-promo-container ul li h3 {
+.landing ul li h3 {
   display: inline-block;
   vertical-align: top;
   padding: 20px 30px 0 0;
   text-decoration: underline;
+  font-size: 22px;
   font-weight: 400;
 
 }
 
-.self-promo-container a:hover{
+.landing a:hover{
   color: #3AACF1;
 }
 
@@ -171,21 +183,57 @@ a:hover {
     color: yellow;
 }*/
 
-.resume-pdf {
+/*.resume-pdf {
   width: 80vw;
   height: 110vw;
+}
+*/
+
+.fc-home .section {
+  background-color: white;
+  width: 100%;
+  height: 340px;
+  padding: 2em;
+  margin-top: 150px;
+  color: #5c5d60;;
+  font-weight: 200;
+  border-bottom: solid 1px rgba(0,0,0,0.25);
+}
+
+.section-heading {
+      margin-top: 0;
+}
+
+.fc-home .section .hero, .fc-home .section .copy {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 37.5%;
+  vertical-align: middle;
+}
+
+.fc-home .section .hero{
+  margin: 0 0 0 0;
+  margin-left: 12.5%;
+  text-align: center;
+}
+
+.fc-home .section .copy{
+  text-align: left;
+}
+
+.fc-home .section .hero img{
+  height: 300px;
+  border: 1px solid black;
+}
+
+.copy .download-link {
+  color: #009ebb;
+  font-size: 1.25rem;
+  font-weight: 500;
+
 }
 
 .card-pdf {
   width: 40vw;
   height: 25vw;
-}
-
-.content-title {
-  padding: 1em;
-}
-
-.content-title a {
-  font-size: .5em;
-  font-weight: 100;
 }
