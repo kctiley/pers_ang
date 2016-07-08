@@ -207,7 +207,8 @@ a:hover {
 .fc-home .section .hero, .fc-home .section .copy {
   box-sizing: border-box;
   display: inline-block;
-  width: 37.5%;
+  width: 36%;
+  margin-left: 1.5%
   vertical-align: middle;
 }
 
