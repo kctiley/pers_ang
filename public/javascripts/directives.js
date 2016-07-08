@@ -9,7 +9,7 @@ app.animation('.slide-animation', function () {
                     if(scope.direction !== 'right') {
                         finishPoint = -finishPoint;
                     }
-                    TweenMax.to(element, 0.5, {left: finishPoint, onComplete: done });
+                    TweenMax.to(element, 1, {left: finishPoint, onComplete: done });
                 }
                 else {
                     done();
@@ -26,7 +26,7 @@ app.animation('.slide-animation', function () {
                         startPoint = -startPoint;
                     }
 
-                    TweenMax.fromTo(element, 0.5, { left: startPoint }, {left: 0, onComplete: done });
+                    TweenMax.fromTo(element, 1, { left: startPoint }, {left: 0, onComplete: done });
                 }
                 else {
                     done();

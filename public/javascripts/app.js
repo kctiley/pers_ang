@@ -5,19 +5,10 @@ var app = angular.module('klintTheHuman', ['ui.router', 'ngRoute', 'ui.bootstrap
     $urlRouterProvider.otherwise("/");
 
     $stateProvider
-      .state('fc', {
+      .state('/fc', {
         url: "/fc",
-        templateUrl: "partials/fc.html"
-      })
-      .state('fc.home', {
-        url: "/fc.home",
-        templateUrl: "partials/fc.home.html",
-      }).state('fc.resume', {
-        url: "/fc.resume",
-        templateUrl: "partials/fc.resume.html",
-      }).state('fc.card', {
-        url: "/fc.card",
-        templateUrl: "partials/fc.card.html",
+        templateUrl: "partials/fc.html",
+        controller: "homeController"
       })
       .state('/', {
         url: "/",
@@ -28,4 +19,5 @@ var app = angular.module('klintTheHuman', ['ui.router', 'ngRoute', 'ui.bootstrap
 
 
 })
+
 

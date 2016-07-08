@@ -1,6 +1,5 @@
 
-
-  <div class= 'fc-home' ng-controller='fcController'>
+  <div class= 'fc-home' >
     <div class="main-header">
       <div class='main-logo'>
         <img src="./images/fc_assets/logo_kth_redC53927white-01.png" >
@@ -24,22 +23,32 @@
       <p>I have the skills to help power your user experience.</p>
       <div class= 'self-promo-container'>
         <ul>
-          <li>
-            <img src="./images/fc_assets/kth_resume_icon.png">
-            <a ui-sref="fc.resume"><h3>Resume</h3></a>
-          </li>
-          <li>
+          <li ng-click="scrollNav('introduction')">
             <img src="./images/fc_assets/kth_intro_icon.png">  
-            <a href=''><h3>Introduction</h3></a>
+            <h3>Introduction</h3>
           </li>
-          <li>
+          <li ng-click="scrollNav('resume')">
+            <img src="./images/fc_assets/kth_resume_icon.png">
+            <h3>Resume</h3>
+          </li>
+          <li ng-click="scrollNav('business-card')">
             <img src="./images/fc_assets/kth_card_icon.png">
-            <a ui-sref="fc.card"><h3>Business Card</h3></a>
+            <h3 >Business Card</h3>
           </li>
         </ul>
       </div>
     </div>
-    <div class='section'>
+    <div class='section' id='introduction'>
+      <div class='copy'>
+        <h2 class='section-heading' > Introduction </h2> 
+        <p> Hello there. More contentProfessional relationships are paramount to your success, FullContact’s powerful apps help you grow the value of your network faster over time.</p>
+        <a href="mailto:kctiley@gmail.com" class='download-link'>Email</a> 
+      </div>
+      <div class='hero'>
+        <img src="./images/fc_assets/hogs_screenshot.png" >
+      </div>
+    </div>    
+    <div class='section' id='resume'>
       <div class='hero'>
         <img src="./images/resume_screenshot.png" >
       </div>
@@ -50,7 +59,7 @@
       </div>
 
     </div>
-    <div class='section'>
+    <div class='section' id='business-card'>
       <div class='copy'>
         <h2 class='section-heading' > Business Card </h2> 
         <p> Hello there. More contentProfessional relationships are paramount to your success, FullContact’s powerful apps help you grow the value of your network faster over time.</p>
@@ -59,7 +68,6 @@
       <div class='hero'>
         <img src="./images/fc_assets/cards.jpg" >
       </div>
-
     </div>    
     
   </div>

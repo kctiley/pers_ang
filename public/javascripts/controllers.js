@@ -2,13 +2,51 @@ app.controller('indexController', ['$scope', '$route', '$rootScope', function($s
   
 }]);
 
-app.controller('fcController',['$scope', '$location', '$route', '$rootScope', function($scope, $location, $route,$rootScope) {
-   
-}]);
+// app.controller('fcController',['$scope', '$location', '$route', '$rootScope', '$anchorScroll', function($scope, $location, $anchorScroll, $route,$rootScope) {
+//    // $scope.scroll = function(elementId) {
+//    //    console.log('scroll to ' , elementId)
+//    //    // set the location.hash to the id of
+//    //    // the element you wish to scroll to.
+//    //    $location.hash(elementId);
 
-app.controller('homeController', ['$scope', '$interval', function($scope,  $interval) {
+//    //    // call $anchorScroll()
+//    //    $anchorScroll();
+//    //  };
+// }]);
+
+app.controller('homeController', ['$scope', '$interval', '$location', '$anchorScroll', function($scope,  $interval, $location, $anchorScroll) {
 
   
+    // $scope.scroll = function(elementId) {
+    //   console.log('scroll to ' , elementId)
+    //   // set the location.hash to the id of
+    //   // the element you wish to scroll to.
+    //   $location.hash(elementId,100);
+
+    //   // call $anchorScroll()
+    //   $anchorScroll();
+    // };
+
+    $scope.scrollNav =function(elementId) {
+      console.log('in scrollNav')
+
+      //Toggle Class
+        // $(".active").removeClass("active");      
+        // $(this).closest('li').addClass("active");
+        // var theClass = $(this).attr("class");
+        // $('.'+theClass).parent('li').addClass('active');
+        //Animate
+        $('html, body').stop().animate({
+            // scrollTop: $( $(this).attr('href') ).offset().top - 160
+            scrollTop: $("#" + elementId).offset().top - 160
+        }, 400);
+        return false;
+      $('.scrollTop a').scrollTop();
+    }
+    // scrollNav();
+
+  // $scope.showRes = true;
+
   $scope.showPreviewsWrapper = true;
   $scope.showSlidesWrapper = false;
   $scope.showSlidesWindow = function(slideGroupIndex){
