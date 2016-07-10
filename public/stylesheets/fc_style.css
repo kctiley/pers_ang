@@ -1,249 +1,569 @@
-a:link {
-    color: white;
-}
-
-a:visited {
-    color: white;
-}
-
-a:hover {
-    opacity: 1.0;
-}
-
-.copy{
-  text-align: left;
-}
-
-.copy .download-link {
-  color: #009ebb;
-  font-size: 1.25rem;
-  font-weight: 500;
-}
-
-.copy p {
-    margin-bottom: 1.5em;
-    font-size: 1.125rem;
-    color: #808285;
-}
-
-.fc-footer {
-  background-color: #5c5d60;
-  width: 100%;
-  height: 90px;
-  padding-bottom: 9px;
-  margin: 0;
-}
-
-.fc-header {
-  position: relative;
-  width: 100%;
-  height: 120px;
-  padding-bottom: 9px;
-  margin: 0;
-}
-
-.fc-home {
-  position: relative;
-  box-sizing: border-box;
-  background:  url('../images/fc_assets/dbx_blue-01.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 700px;
-  font-family: "Avenir W02",sans-serif;
-  line-height: 1.5;
-}
-
-.fc-home .main-logo h2 {
-  position: absolute;
-  font-size: 2rem;
-  margin-bottom: .5em;
-  margin-top: 50px;
-  margin-left: 100px;
-  font-size: 16px;
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-.fc-home .main-logo h2 span{
-  font-weight: 100;
-}
 
 
-.height-ease {
-    -webkit-transition: height 300ms linear;
-    -moz-transition: height 300ms linear;
-    -o-transition: height 300ms linear;
-    -ms-transition: height 300ms linear;
-    transition: height 300ms linear;
-}
+    a:link {
+        color: white;
+    }
 
-.hero, .copy {
-  box-sizing: border-box;
-  display: inline-block;
-  width: 36%;
-  margin-left: 1.5%
-  vertical-align: middle;
-}
+    a:visited {
+        color: white;
+    }
 
-.hero{
-  margin: 0 0 0 0;
-  text-align: center;
-}
+    a:hover {
+        opacity: 1.0;
+    }
 
-.hero img{
-  height: 300px;
-  border: solid 2px rgba(0,0,0,0.125);
-}
+    .copy{
+      text-align: left;
+    }
 
-.landing {
-  margin-top: 7vh;
-  padding: 6em;
-  text-align: center;
-  color: white;
-}
+    .copy .download-link {
+      color: #009ebb;
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
 
-.landing h1{
-  font-weight: 400;
-  font-size: 36px;
-  letter-spacing: 2px;
-}
+    .copy p {
+        margin-bottom: 1.5em;
+        font-size: 1.125rem;
+        color: #808285;
+    }
 
-.landing p{
-  margin-top: 20px;
-  font-weight: 300;
-  font-size: 22px;
-  opacity: .75;
-}
+    .fc-footer {
+      background-color: #5c5d60;
+      width: 100%;
+      height: 90px;
+      padding-bottom: 9px;
+      margin: 0;
+    }
 
-.landing ul {
-  padding: 3em;
-}
+    .fc-header {
+      position: relative;
+      width: 100%;
+      height: 120px;
+      padding-bottom: 9px;
+      margin: 0;
+    }
 
-.landing ul li {
-  list-style-type: none;
-  display: inline-block;
-  text-align: center;
-}
-.landing ul li img {
-  height: 70px;
-  display: inline-block;
-}
+    .fc-home {
+      position: relative;
+      box-sizing: border-box;
+      background:  url('../images/fc_assets/dbx_blue-01.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 700px;
+      font-family: "Avenir W02",sans-serif;
+      line-height: 1.1;
+    }
 
-.landing ul li h3 {
-  display: inline-block;
-  vertical-align: top;
-  padding: 20px 30px 0 0;
-  text-decoration: underline;
-  font-size: 22px;
-  font-weight: 400;
+    .fc-home .main-logo h2 {
+      position: absolute;
+      font-size: 2rem;
+      margin-bottom: .5em;
+      margin-top: 50px;
+      margin-left: 100px;
+      font-size: 16px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
 
-}
+    .fc-home .main-logo h2 span{
+      font-weight: 100;
+    }
 
-.landing h3:hover{
-  color: #009ebb;
-}
 
-.logo-container {
-  width: 33%
-}
+    .height-ease {
+        -webkit-transition: height 300ms linear;
+        -moz-transition: height 300ms linear;
+        -o-transition: height 300ms linear;
+        -ms-transition: height 300ms linear;
+        transition: height 300ms linear;
+    }
 
-.main-logo {
-  transition: all 0.4s ease;
-  height: 100px;
-  width: 100px;
-  background-color: #c53927;
-  color: white;
-  position: absolute;
-  overflow: hidden;
-}
+    .hero, .copy {
+      box-sizing: border-box;
+      display: inline-block;
+      width: 36%;
+      margin-left: 1.5%
+      vertical-align: middle;
+    }
 
-.main-logo:hover {
-  width: 240px;
-  transform: scale(1.1); 
-}
+    .hero{
+      margin: 0 0 0 0;
+      text-align: center;
+    }
 
-.main-logo img{
-  position: absolute;
-  margin-top: 10px;
-  margin-left: 12px;
-  height: 80%;
-}
+    .hero img{
+      height: 300px;
+      border: solid 2px rgba(0,0,0,0.125);
+    }
 
-.main-nav {
-  width: 100%;
-}
+    .landing {
+      margin-top: 7vh;
+      padding: 3em;
+      text-align: center;
+      color: white;
+    }
 
-.main-nav ul {
-  text-align: right;
-  padding-right: 2em;
-}
+    .landing h1{
+      font-weight: 400;
+      font-size: 27px;
+      letter-spacing: 1.5px;
+    }
 
-.main-nav ul li {
-  text-transform: uppercase;
-  list-style-type: none;
-  display: inline-block;
-  color: white;
-  padding: 1em;
-  font-weight: 300;
-  font-size: 1em;
-  opacity: .75;
-}
+    .landing p{
+      margin-top: 20px;
+      font-weight: 300;
+      font-size: 16px;
+      opacity: .75;
+    }
 
-.main-nav ul li a{
-  text-decoration: none ;
-}
+    .landing ul {
+      padding: 2em;
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%;
+    }
 
-.main-nav ul li:hover {
-  opacity: 1;
-}
+    .landing ul li {
+      list-style-type: none;
+      display: block;
+      text-align: center;
+    }
+    .landing ul li img {
+      height: 50px;
+      display: block;
+      padding-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-.main-nav ul li .menu-button {
-  font-size: 2em;
-}
+    .landing ul li h3 {
+      display: inline-block;
+      vertical-align: top;
+      padding: 1px 0px 0 0;
+      text-decoration: underline;
+      font-size: 14px;
+      font-weight: 400;
 
-.menu-button i {
-  border: .075em solid white;
-  padding: .25em .5em .25em .5em;
-  border-radius: 4px;
-}
+    }
 
-.scroll-header {
-  position: fixed;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.5);
-  border-bottom: solid 1px rgba(0,0,0,0.125);
-  margin: 0;
-  overflow: hidden;
-}
+    .landing h3:hover{
+      color: #009ebb;
+    }
 
-.scroll-header .main-nav ul li a, .scroll-header .main-nav ul li{
-  color: gray;
-}
+    .logo-container {
+      width: 33%
+    }
 
-.scroll-header .main-nav ul li .menu-button i {
-  border: .075em solid gray;
-}
+    .main-logo {
+      transition: all 0.4s ease;
+      height: 100px;
+      width: 100px;
+      background-color: #c53927;
+      color: white;
+      position: absolute;
+      overflow: hidden;
+    }
 
-.vert-closed {
-  height: 0px;
-}
+    .main-logo:hover {
+      width: 240px;
+      transform: scale(1.1); 
+    }
 
-.vert-open-100 {
-  height: 100px;
-}
+    .main-logo img{
+      position: absolute;
+      margin-top: 10px;
+      margin-left: 12px;
+      height: 80%;
+    }
 
-.section {
-  background-color: white;
-  width: 100%;
-  height: 340px;
-  padding-left: 12.5%;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  color: #5c5d60;;
-  font-weight: 200;
-  border-bottom: solid 1px rgba(0,0,0,0.125);
-}
+    .main-nav {
+      width: 100%;
+    }
 
-.section-heading {
-  margin-top: 0;
+    .main-nav ul {
+      text-align: right;
+      padding-right: 1.4em;
+    }
+
+    .main-nav ul li {
+      text-transform: uppercase;
+      list-style-type: none;
+      display: inline-block;
+      color: white;
+      padding: .66em;
+      font-weight: 300;
+      font-size: .72em;
+      opacity: .75;
+    }
+
+    .main-nav ul li a{
+      text-decoration: none ;
+    }
+
+    .main-nav ul li:hover {
+      opacity: 1;
+    }
+
+    .main-nav ul li .menu-button {
+      font-size: 2em;
+    }
+
+    .menu-button i {
+      border: .075em solid white;
+      padding: .25em .5em .25em .5em;
+      border-radius: 4px;
+    }
+
+    .scroll-header {
+      position: fixed;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.5);
+      border-bottom: solid 1px rgba(0,0,0,0.125);
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .scroll-header .main-nav ul li a, .scroll-header .main-nav ul li{
+      color: gray;
+    }
+
+    .scroll-header .main-nav ul li .menu-button i {
+      border: .075em solid gray;
+    }
+
+    .vert-closed {
+      height: 0px;
+    }
+
+    .vert-open-100 {
+      height: 100px;
+    }
+
+    .section {
+      background-color: white;
+      width: 100%;
+      height: 340px;
+      padding-left: 12.5%;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      color: #5c5d60;;
+      font-weight: 200;
+      border-bottom: solid 1px rgba(0,0,0,0.125);
+    }
+
+    .section-heading {
+      margin-top: 0;
+    }
+
+
+
+@media only screen 
+  and (min-width: 500px)
+  and (max-width: 900px) 
+  
+  {
+    .copy .download-link {
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+
+    .copy p {
+        margin-bottom: 1.5em;
+        font-size: 1.125rem;
+    }
+
+    .fc-home {
+      height: 700px;
+      line-height: 1.5;
+    }
+
+    .fc-home .main-logo h2 {
+      font-size: 2rem;
+      margin-bottom: .5em;
+      margin-top: 50px;
+      margin-left: 100px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .fc-home .main-logo h2 span{
+      font-weight: 100;
+    }
+
+    .hero, .copy {
+      display: inline-block;
+      width: 36%;
+      margin-left: 1.5%
+      vertical-align: middle;
+    }
+
+    .hero img{
+      height: 300px;
+    }
+
+    .landing {
+      margin-top: 7vh;
+      padding: 6em;
+    }
+
+    .landing h1{
+      font-weight: 400;
+      font-size: 36px;
+      letter-spacing: 2px;
+    }
+
+    .landing p{
+      margin-top: 20px;
+      font-weight: 300;
+      font-size: 22px;
+    }
+
+    .landing ul {
+      padding: 3em;
+    }
+
+    .landing ul li {
+      display: inline-block;
+      text-align: center;
+    }
+    .landing ul li img {
+      height: 70px;
+      display: inline-block;
+    }
+
+    .landing ul li h3 {
+      display: inline-block;
+      vertical-align: top;
+      padding: 20px 30px 0 0;
+      font-size: 22px;
+      font-weight: 400;
+
+    }
+
+    .logo-container {
+      width: 33%
+    }
+
+    .main-logo {
+      height: 100px;
+      width: 100px;
+    }
+
+    .main-logo:hover {
+      width: 240px;
+      transform: scale(1.1); 
+    }
+
+    .main-logo img{
+      position: absolute;
+      margin-top: 10px;
+      margin-left: 12px;
+      height: 80%;
+    }
+
+    .main-nav {
+      width: 100%;
+    }
+
+    .main-nav ul {
+      text-align: right;
+      padding-right: 2em;
+    }
+
+    .main-nav ul li {
+      display: inline-block;
+      padding: 1em;
+      font-weight: 300;
+      font-size: 1em;
+      opacity: .75;
+    }
+
+    .main-nav ul li .menu-button {
+      font-size: 2em;
+    }
+
+    .menu-button i {
+      border: .075em solid white;
+      padding: .25em .5em .25em .5em;
+      border-radius: 4px;
+    }
+
+    .scroll-header {
+      position: fixed;
+      width: 100%;
+      border-bottom: solid 1px rgba(0,0,0,0.125);
+    }
+
+    .scroll-header .main-nav ul li .menu-button i {
+      border: .075em solid gray;
+    }
+
+    .section {
+      width: 100%;
+      height: 340px;
+      padding-left: 12.5%;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      font-weight: 200;
+      border-bottom: solid 1px rgba(0,0,0,0.125);
+    }
+
+    .section-heading {
+      margin-top: 0;
+    }
+  }
+
+@media only screen and (min-width: 900px)
+  {
+        .copy .download-link {
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+
+    .copy p {
+        margin-bottom: 1.5em;
+        font-size: 1.125rem;
+    }
+
+    .fc-home {
+      height: 700px;
+      line-height: 1.5;
+    }
+
+    .fc-home .main-logo h2 {
+      font-size: 2rem;
+      margin-bottom: .5em;
+      margin-top: 50px;
+      margin-left: 100px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .fc-home .main-logo h2 span{
+      font-weight: 100;
+    }
+
+    .hero, .copy {
+      display: inline-block;
+      width: 36%;
+      margin-left: 1.5%
+      vertical-align: middle;
+    }
+
+    .hero img{
+      height: 300px;
+    }
+
+    .landing {
+      margin-top: 7vh;
+      padding: 6em;
+    }
+
+    .landing h1{
+      font-weight: 400;
+      font-size: 36px;
+      letter-spacing: 2px;
+    }
+
+    .landing p{
+      margin-top: 20px;
+      font-weight: 300;
+      font-size: 22px;
+    }
+
+    .landing ul {
+      padding: 3em;
+    }
+
+    .landing ul li {
+      display: inline-block;
+      text-align: center;
+    }
+    .landing ul li img {
+      height: 70px;
+      display: inline-block;
+    }
+
+    .landing ul li h3 {
+      display: inline-block;
+      vertical-align: top;
+      padding: 20px 30px 0 0;
+      font-size: 22px;
+      font-weight: 400;
+
+    }
+
+    .logo-container {
+      width: 33%
+    }
+
+    .main-logo {
+      height: 100px;
+      width: 100px;
+    }
+
+    .main-logo:hover {
+      width: 240px;
+      transform: scale(1.1); 
+    }
+
+    .main-logo img{
+      position: absolute;
+      margin-top: 10px;
+      margin-left: 12px;
+      height: 80%;
+    }
+
+    .main-nav {
+      width: 100%;
+    }
+
+    .main-nav ul {
+      text-align: right;
+      padding-right: 2em;
+    }
+
+    .main-nav ul li {
+      display: inline-block;
+      padding: 1em;
+      font-weight: 300;
+      font-size: 1em;
+      opacity: .75;
+    }
+
+    .main-nav ul li .menu-button {
+      font-size: 2em;
+    }
+
+    .menu-button i {
+      border: .075em solid white;
+      padding: .25em .5em .25em .5em;
+      border-radius: 4px;
+    }
+
+    .scroll-header {
+      position: fixed;
+      width: 100%;
+      border-bottom: solid 1px rgba(0,0,0,0.125);
+    }
+
+    .scroll-header .main-nav ul li .menu-button i {
+      border: .075em solid gray;
+    }
+
+    .section {
+      width: 100%;
+      height: 340px;
+      padding-left: 12.5%;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      font-weight: 200;
+      border-bottom: solid 1px rgba(0,0,0,0.125);
+    }
+
+    .section-heading {
+      margin-top: 0;
+    }
+
 }

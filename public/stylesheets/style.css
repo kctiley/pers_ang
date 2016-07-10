@@ -519,12 +519,12 @@ font-size: 1em;
   padding: .25em;
 }
 
+
 @media only screen 
   and (min-width: 500px)
   and (max-width: 900px) 
   
   {
-
     .header h2 {
       font-size: 1.25em;
       padding: .5em;
