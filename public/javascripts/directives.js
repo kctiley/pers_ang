@@ -49,8 +49,8 @@ app.directive("scroll", function ($window) {
             var shrinkSubTitle = "-=" + (Yoff * .05) + "em";
 
             if(Yoff > 220) {
-              angular.element(".scroll-header").addClass('vert-open-100')
               angular.element(".scroll-header").removeClass('vert-closed')
+              angular.element(".scroll-header").addClass('vert-open-100')
             }
             else{
               angular.element(".scroll-header").removeClass('vert-open-100')
