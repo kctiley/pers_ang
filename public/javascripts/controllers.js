@@ -90,7 +90,7 @@ app.controller('homeController', ['$scope', '$interval', '$location', '$anchorSc
     };
   
     $scope.$on('$destroy', function() {
-      // $scope.stop();
+      $scope.stop();
     });
 
 
