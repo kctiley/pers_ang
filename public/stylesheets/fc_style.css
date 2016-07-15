@@ -208,6 +208,7 @@
       border: .075em solid white;
       padding: .25em .5em .25em .5em;
       border-radius: 4px;
+      display: none;
     }
 
     .scroll-header {
